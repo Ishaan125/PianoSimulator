@@ -1,0 +1,1097 @@
+/*Sets the size of the webpage*/
+html, body {
+  height: 95.5%;
+  width: 99.8%;
+}
+
+/*The size of the piano*/
+.piano {
+  width: 95%;
+  height: 34.5%;
+  position: relative;
+  top: 70%;
+  transform: translateY(10%);
+  overflow-x: auto;
+  margin-left: 70px;
+}
+
+/*Every key inside the piano*/
+.key {
+  height: 100px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  margin-right: calc(100% / -242);
+  color:rgb(150, 150, 150);
+  text-align: center;
+  box-shadow: 5px 5px 20px #bebdbd;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*Every time there are two white notes next to each other*/
+.move {
+  margin-right: -1.5px;
+}
+
+/*Sets the white and black key properties*/
+.white {
+  background-color: #fff;
+  float: left;
+  z-index: 1;
+  width: calc(100% / 52.5 * 1.055);
+  height: 60%;
+}
+
+.white.active {
+  background-color: rgb(226, 226, 226);
+  height: 59.1%;
+  top: 0.5%;
+}
+
+.black {
+  background-color: rgb(0, 0, 0);
+  float: left;
+  width: calc(100% / 52 * 0.52);
+  height: 35%;
+  position: relative;
+  z-index: 2;
+  margin-left: -0.3em;
+}
+
+.black.active {
+  background-color: #333;
+  height: 34%;
+  top: 0.5%;
+}
+
+/*The sidebar*/
+.menu{
+  background-color: rgb(253, 253, 253);
+  box-shadow: 0px 0px 20px #a5a5a5;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  width: 3.5%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: .3s ease;
+}
+
+.menu:hover{
+  width : 15%;
+  overflow-y: scroll;
+}
+
+/*The buttons inside the sidebar that light up when hovered over*/
+.menu .technique{
+  padding: 10px;
+  width: 90%;
+  height: 10vh;
+  border-color: rgb(226, 226, 226);
+  box-shadow: inset 2px 2px 2px rgb(230, 230, 230), inset -1px -1px 1px rgba(141, 141, 141, 0.6);
+  font-size: 0.7vw;
+}
+
+.menu .technique:hover{
+  background-color: #d6d6d6;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.menu .technique .fa{
+  color: gray;
+  width:40px;
+  font-size: 1.5vw;
+  padding: 0.5vw;
+}
+
+.menu .technique:hover > .fa{
+  color: #1d0daa;
+}
+
+section.home{
+  background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*Buttons at the top of the screen*/
+.buttons{
+  position: relative;
+  overflow-x: auto;
+
+  width: 65%;
+  height: 15%;
+  top: -30%;
+  left: 23%;
+}
+
+.extra {
+  position: relative;
+  box-sizing: border-box;
+
+  float: left;
+  color: rgb(212, 201, 201);
+  background-color: #474646;
+  height: 85%;
+  width: 15%;
+  padding: 10px;
+
+  border-radius: 10px;
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-left: 10px;
+  box-shadow: inset 3px 3px 3px rgb(59, 59, 59), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.buttons .extra:hover{
+  background-color: #2b2929;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #a5a5a5;
+} 
+
+/*Dark mode button*/
+#dark {
+  position: absolute;
+  background-color: #4e4b4b;
+  color: rgb(212, 201, 201);
+  cursor: pointer;
+  margin-left: 94vw;
+  margin-top: -22vw;
+
+  border-radius: 10px;
+  height: 40px;
+  width: 90px;
+  box-shadow: inset 2px 2px 2px rgb(110, 110, 110), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+#dark:hover {
+  background-color: #1a1919;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+/*Every button in the side panel that pops up a new panel*/
+.sidebaractive {
+  transform: translate(-4%) !important;
+}
+.sidekeyactive {
+  transform: translate(-4%) !important;
+}
+.sidechordactive {
+  transform: translate(-4%) !important;
+}
+.sidechord7active {
+  transform: translate(-4%) !important;
+}
+.sidearractive {
+  transform: translate(-4%) !important;
+}
+.sidearr7active {
+  transform: translate(-4%) !important;
+}
+.sidecadenceactive {
+  transform: translate(-4%) !important;
+}
+.sideotheractive {
+  transform: translate(-4%) !important;
+}
+
+/*Sets the properties of the secondary panels*/
+.side {
+  width: 15.6%;
+  background: #f3f0f3;
+  height: 100vh;
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  left: 0;
+  transform: translate(-100%);
+  transition: all 0.3s linear 0s;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #d4d4d4;
+  box-shadow: inset 3px 3px 3px rgb(230, 229, 229), inset -2px -2px 3px rgba(209, 209, 209, 0.6);
+  overflow-y: scroll;
+}
+.sidebar {
+  top: 55%;
+}
+.sideKey {
+  top: 75%;
+}
+.sideChord {
+  top: 54%;
+}
+.sideChord7 {
+  top: 49%;
+}
+.sideArr {
+  top: 47%;
+}
+.sideArr7 {
+  top: 47%;
+}
+.sideCadence {
+  top: 56%;
+}
+.sideOther {
+  top: 35%;
+}
+
+/*Changes the text and spacing between lines in the secondary panels*/
+ul.nav {
+  list-style: none;
+  margin-top: 20%;
+}
+
+ul.nav li {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9vw;
+}
+
+.line {
+  display: block;
+  margin: 0.8vw 0;
+  content: " ";
+}
+
+.type {
+  left: 0;
+  padding: 0px;
+  width: 3.7vw;
+  height: 1.8vw;
+  border-color: #dfdfdf;
+  border-radius: 5px;
+  font-size: 0.6vw;
+}
+
+.type:hover {
+  background-color: #c4c2c2;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+/*The done button that closes the secondary panel and plays the notes*/
+.Done {
+  background-color: #5cdd87;
+  border-color:rgb(65, 65, 65);
+  border-radius: 5px;
+  width: 180%;
+  height: 120%;
+  margin-left: 220%;
+  box-shadow: inset 2px 2px 2px rgb(95, 177, 110), inset -1px -1px 2px rgba(96, 185, 96, 0.6);
+}
+
+.Done:hover {
+  background-color: rgb(87, 192, 105);
+  border-color:rgb(92, 92, 92);
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #a5a5a5;
+}
+
+/*The sliders in the secondary side panels*/
+#rangeValue {
+  margin-left: 34%;
+}
+#rangeValuea {
+  margin-left: 34%;
+}
+#rangeValuea7 {
+  margin-left: 34%;
+}
+#rangeValue36 {
+  margin-left: 50%;
+}
+
+.number {
+  margin-left: 34%;
+}
+#slide {
+  margin-left: 11%;
+}
+#slidea {
+  margin-left: 11%;
+}
+#slidea7 {
+  margin-left: 11%;
+}
+#slide36 {
+  margin-left: 11%;
+}
+
+
+/*Animations for all of the side panel info buttons*/
+
+.question {
+  border-radius: 5px;
+  border-color:rgb(65, 65, 65);
+  background-color: #caceca;
+  border-width: 1px;
+  width: 1.1vw;
+  height: 0.9vw;
+  font-size: 0.7vw;
+  box-shadow: inset 2px 2px 2px rgb(212, 211, 211), inset -1px -1px 2px rgba(185, 184, 184, 0.6);
+  padding: 0px;
+} 
+
+.question:hover {
+  background-color: #939693;
+  border-color:rgb(92, 92, 92);
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #a5a5a5;
+}
+
+/*Animations for side panel buttons*/
+.infoKeyactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 190px;
+  top: 62%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoTypeactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 4vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 133px;
+  top: 67.2%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoSpeedactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 140px;
+  top: 79.7%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.infoKeyCactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 190px;
+  top: 60.7%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoTypeCactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 5.5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 133px;
+  top: 65.5%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoInversionCactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 5.5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 185px;
+  top: 81.5%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.infoKeyCactive7 {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 190px;
+  top: 56%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoTypeCactive7 {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 133px;
+  top: 60.7%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoInversionCactive7 {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 6.5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 185px;
+  top: 79.5%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.infoKeyAactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3.4vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 188px;
+  top: 53.7%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoTypeAactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 4.5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 131px;
+  top: 58.9%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoInversionAactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 5.5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 183px;
+  top: 70.3%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoSpeedAactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 136px;
+  top: 83.5%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.infoKeyA7active {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3.4vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 188px;
+  top: 53.7%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoTypeA7active {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 131px;
+  top: 58.5%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoInversionA7active {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 7.5vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 181px;
+  top: 68.3%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoSpeedA7active {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 136px;
+  top: 83.3%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+.infoKeyCadactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 3vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 190px;
+  top: 62.8%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoTypeCadactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 4vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 132px;
+  top: 66.4%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+.infoCadCadactive {
+  transform: translate(-4%) !important;
+  width: 100px;
+  background: #ebe8eb;
+  height: 5.2vh;
+  position: fixed;
+  padding: 3px;
+  box-sizing: border-box;
+  left: 171px;
+  top: 75.8%;
+  transition: all 0.3s linear 0s;
+  font-size: x-small;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #a5a5a5;
+}
+
+/*.box {
+  width: 90%;
+  height: 50%;
+  margin-top: 400px;
+  margin-left: 70px;
+  z-index: 0;
+}
+
+.shape {
+  border-bottom: 30px solid transparent;
+  border-Top: 30px solid transparent;
+  border-left: 180px solid #66B2ff;
+  height: 70px;
+
+  float: left;
+  z-index: 0;
+  width: calc(100% / 52.5 * 1.055);
+  overflow-x: auto;
+  margin-right: calc(100% / -242);
+}*/
+
+/*Sets the properties for the range sliders*/
+#rangaeValue {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  margin-left: 50.5%;
+  margin-top: -33vh;
+  z-index: -1;
+}
+.rangae {
+  width: 120px;
+  height: 15px;
+  background: #111;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  margin-left: 48%;
+  z-index: -1;
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 4px solid #333;
+}
+
+.rangaeactive {
+  transform: translateY(45px) !important;
+}
+.rangaeValueactive {
+  transform: translateY(45px) !important;
+}
+
+/*Metronome button*/
+#mtClose {
+  position: relative;
+  margin-left: 55%;
+  z-index: -1;
+  top: -4%;
+  background-color: #5cdd87;
+  border-color:rgb(65, 65, 65);
+  border-radius: 5px;
+  border-width: 2px;
+  box-shadow: inset 2px 2px 2px rgb(95, 177, 110), inset -1px -1px 2px rgba(96, 185, 96, 0.6);
+}
+.mtClose:hover {
+  background-color: rgb(87, 192, 105);
+  border-color:rgb(92, 92, 92);
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #a5a5a5;
+}
+.mtCloseactive {
+  transform: translateY(50px) !important;
+}
+
+/*Close button that closes the secondary side panel and reloads the page*/
+.close{ 
+  position: absolute;
+  background-color: rgb(209, 204, 204);
+  right: 15px;
+  top: 15px;
+  border-radius: 5px;
+  font-size: x-small;
+  width: 25px;
+  height: 17px;
+  box-shadow: inset 2px 2px 2px rgb(173, 171, 171), inset -1px -1px 2px rgba(185, 96, 96, 0.6);
+}
+.close:hover {
+  background-color: rgb(231, 79, 79);
+  border-color:rgb(92, 92, 92);
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #a5a5a5;
+}
+
+/*Grand staff*/
+#grand {
+  position: absolute;
+  left: 21.5%;
+  top: 34.8%;
+  z-index: 1;
+  width: 1200px;
+  height: 970px;
+}
+
+/*Size of each note*/
+.note {
+  position: absolute;
+  width: 120px;
+  height: 112px;
+  z-index: 4;
+  top: 35%;
+}
+
+/*Where every note and accidental is*/
+#n1, #n16, #n17, #n18{
+  right: 67%;
+}
+#n2, #n19, #n20, #n21 {
+  right: 65%
+}
+#n3 {
+  right: 63%
+}
+#n4 {
+  right: 61%
+}
+#n5 {
+  right: 59%
+}
+#n6 {
+  right: 57%
+}
+#n7 {
+  right: 55%
+}
+#n8 {
+  right: 53%
+}
+#n9 {
+  right: 51%
+}
+#n10 {
+  right: 49%
+}
+#n11 {
+  right: 47%
+}
+#n12 {
+  right: 45%
+}
+#n13 {
+  right: 43%
+}
+#n14 {
+  right: 41%
+}
+#n15 {
+  right: 39%;
+}
+#n22 {
+  right: 37%;
+}
+#n23 {
+  right: 35%;
+}
+
+.sharp {
+  position: absolute;
+  width: 110px;
+  height: 64px;
+  z-index: 4;
+}
+
+#s1 {
+  right: 70.7%;
+  top: 35.6%;
+}
+#s2 {
+  right: 70.2%;
+  top: 37.7%;
+}
+#s3 {
+  right: 69.7%;
+  top: 35.1%;
+}
+#s4 {
+  right: 69.2%;
+  top: 37%;
+}
+#s5 {
+  right: 68.7%;
+  top: 38.8%;
+}
+#s6 {
+  right: 68.2%;
+  top: 36.3%;
+}
+#s7 {
+  right: 67.7%;
+  top: 38.3%;
+}
+#s8 {
+  right: 70.7%;
+  top: 49.4%;
+}
+#s9 {
+  right: 70.2%;
+  top: 51.5%;
+}
+#s10 {
+  right: 69.7%;
+  top: 48.9%;
+}
+#s11 {
+  right: 69.2%;
+  top: 50.8%;
+}
+#s12 {
+  right: 68.7%;
+  top: 52.6%;
+}
+#s13 {
+  right: 68.2%;
+  top: 50%;
+}
+#s14 {
+  right: 67.7%;
+  top: 52.1%;
+}
+
+.flat {
+  position: absolute;
+  width: 110px;
+  height: 64px;
+  z-index: 4;
+}
+
+#b7 {
+  right: 69.2%;
+  top: 39.6%;
+}
+#b6 {
+  right: 69.7%;
+  top: 37.3%;
+}
+#b5 {
+  right: 70.2%;
+  top: 39.1%;
+}
+#b4 {
+  right: 70.7%;
+  top: 36.6%;
+}
+#b3 {
+  right: 71.2%;
+  top: 38.4%;
+}
+#b2 {
+  right: 71.7%;
+  top: 35.9%;
+}
+#b1 {
+  right: 72.2%;
+  top: 37.9%;
+}
+#b14 {
+  right: 69.2%;
+  top: 53.4%;
+}
+#b13 {
+  right: 69.7%;
+  top: 51.1%;
+}
+#b12 {
+  right: 70.2%;
+  top: 52.8%;
+}
+#b11 {
+  right: 70.7%;
+  top: 50.4%;
+}
+#b10 {
+  right: 71.2%;
+  top: 52.2%;
+}
+#b9 {
+  right: 71.7%;
+  top: 49.6%;
+}
+#b8 {
+  right: 72.2%;
+  top: 51.7%;
+}
+
+/*Word at the top left of the sheet mmusic that shows the speed and its word*/
+#Speed {
+  position: absolute;
+  top: 33%;
+  left: 23%;
+  z-index: 6;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*The roman numerals*/
+.numeral {
+  position: absolute;
+  left: 26%;
+  top: 56%;
+  z-index: 4;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*Ledger lines*/
+.ledge {
+  position: absolute;
+  font-size: 25px;
+  z-index: 5;
+}
+
+#ledge1A, #ledge2A, #ledge3A, #ledge4A, #ledge5A {
+  top: 32.5%;
+}
+#ledge1C, #ledge2C, #ledge3C {
+  top: 31.26%;
+}
+#ledgeE {
+  top: 30.02%;
+}
+#ledgemid1, #ledgemid2 {
+  top: 40%;
+}
+
+/*Accidentals for minor, melodic minor, augmented, diminished, and dominant*/
+.accident {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 1000;
+  z-index: 5;
+}
+#acc1 {
+  right: 60.5%;
+}
+#acc2 {
+  right: 58.5%;
+}
+#acc3 {
+  right: 54.5%;
+}
+#acc4 {
+  right: 52.5%;
+}
+
+/*The two guides at the top of the screen*/
+/*Opens up a popup with all of the info and a close button*/
+.guide .overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background:rgba(0,0,0,0.7);
+  z-index: 1;
+  display: none;
+}
+
+.guide .stuff { 
+  position:absolute;
+  background:#fff;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 6;
+}  
+
+.guide .close-btn { 
+  cursor: pointer;
+  position:absolute;
+  right: 20px;
+  width: 30px;
+  height: 30px; 
+  background:#222;
+  color:#fff; 
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.guide.active .overlay { 
+  display: block;
+}
+
+.guide.active.stuff {
+  display: block;
+}
+
+#guide1 .stuff{
+  font-size: 0.8vw;
+  width:60%; 
+  height: 55%;
+  top: 21%;
+  left: 21%;
+}
+
+#guide2 .stuff{
+  font-size: 0.61vw;
+  width: 100%; 
+  height: 100%;
+  top: 0.1%;
+}
+
+/*Set the proportions for the dropdowns*/
+.dropper {
+  width:3vw;
+  height:1.2vw;
+  font-size: 0.7vw;
+}
