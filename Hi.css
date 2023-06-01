@@ -299,13 +299,15 @@ ul.nav li {
 
 /*The done button that closes the secondary panel and plays the notes*/
 .Done {
+  padding: 0;
   background-color: #5cdd87;
   border-color:rgb(65, 65, 65);
   border-radius: 5px;
-  width: 180%;
-  height: 120%;
-  margin-left: 220%;
+  width: 2.7vw;
+  height: 1.2vw;
+  margin-left: 3vw;
   box-shadow: inset 2px 2px 2px rgb(95, 177, 110), inset -1px -1px 2px rgba(96, 185, 96, 0.6);
+  font-size: 0.8vw;
 }
 
 .Done:hover {
@@ -753,14 +755,15 @@ ul.nav li {
 
 /*Close button that closes the secondary side panel and reloads the page*/
 .close{ 
+  padding: 0;
   position: absolute;
   background-color: rgb(209, 204, 204);
   right: 15px;
   top: 15px;
   border-radius: 5px;
-  font-size: x-small;
-  width: 25px;
-  height: 17px;
+  font-size: 0.5vw;
+  width: 1.5vw;
+  height: 1vw;
   box-shadow: inset 2px 2px 2px rgb(173, 171, 171), inset -1px -1px 2px rgba(185, 96, 96, 0.6);
 }
 .close:hover {

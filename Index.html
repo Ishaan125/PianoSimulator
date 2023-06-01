@@ -214,19 +214,19 @@
 <div class = "menu">
   <ul>
     <li><button id = scales class="technique" onclick = "btn()"><i class="fa fa-music"></i>Scales</button></li>
-    <br>
+    <br class = line>
     <li><button id = chords class="technique" onclick = "btn()"><i class="fa fa-bars"></i>Chords</button></li>
-    <br>
+    <br class = line>
     <li><button id = arpeggios class="technique" onclick = "btn()"><i class="fa fa-spinner"></i>Arpeggios</button></li>
-    <br>
+    <br class = line>
     <li><button id = 7chords class="technique" onclick = "btn()"><i class="fa fa-bars"></i>7th Chords</button></li>
-    <br>
+    <br class = line>
     <li><button id = arpeggios7 class="technique" onclick = "btn()"><i class="fa fa-spinner"></i>7th Arpeggios</button></li>
-    <br>
+    <br class = line>
     <li><button id = keyFind class="technique" onclick = "btn()"><i class="fa fa-search"></i>Key Finder</button></li>
-    <br>
+    <br class = line>
     <li><button id = cadences class="technique" onclick = "btn()"><i class="fa fa-spotify"></i>Cadences</button></li>
-    <br>
+    <br class = line>
     <li><button id = other class="technique" onclick = "btn()"><i class="fa fa-plus-circle"></i>Other</button></li>
   </ul>
 </div>
@@ -284,23 +284,23 @@ alt l, alt o
       </select>
     </li>
     <li><button class = question onclick = "btn(), infoKey()" id = keyInfo><strong>?</strong></button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li>Type:</li>
     <li><button class = question onclick = "btn(), infoType()" id = typeInfo><strong>?</strong></button></li>
-    <br> <br>
+    <br class = line> <br class = line>
     <!--Buttons to select major, minor, or melodic-->
     <li><button class = type onclick = "btn(), major()" id = MajorS>Major</button></li>
     <li><button class = type onclick = "btn(), minor()" id = MinorS>Minor</button></li>
     <li><button class = type onclick = "btn(), melodic()" id = MelodicS>Melodic</button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li>Speed:
       <li><button class = question onclick = "btn(), infoSpeed()" id = speedInfo><strong>?</strong></button></li>
-      <br> <br>
+      <br class = line> <br class = line>
       <!--Slider to change speed-->
       <input id = slide type="range" min="30" max="500" value="100" oninput="rangeValue.innerText = this.value">
       <p id="rangeValue">150</p>
     </li>
-    <br>
+    <br class = line>
     <!--Done button to play what you have selected-->
     <li><button onclick = "btn(), next(), notation()" class = Done><i class="fa fa-check"></i></button></li>
     <!--Close button to close the button in the side panel and reload the page-->
@@ -337,7 +337,7 @@ alt l, alt o
         <option value="/G">G</option>
       </select>
     </li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li><label for="Octave">Octave: </label>
       <select class = dropper id = "keyDropOctave">
         <option disabled hidden selected>Select</option>
@@ -351,7 +351,7 @@ alt l, alt o
         <option value="8">8</option>
       </select>
     </li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li><button onclick = "btn(), next2()" class = Done><i class="fa fa-check"></i></button></li>
     <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
   </ul>
@@ -378,23 +378,23 @@ alt l, alt o
       </select>
     </li>
     <li><button class = question onclick = "btn(), infoKeyC()" id = keyInfoC><strong>?</strong></button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li>Type:</li>
     <li><button class = question onclick = "btn(), infoTypeC()" id = typeInfoC><strong>?</strong></button></li>
-    <br> <br>
+    <br class = line> <br class = line>
     <li><button class = type onclick = "btn(), majorC()" id = MajorC>Major</button></li>
     <li><button class = type onclick = "btn(), minorC()" id = MinorC>Minor</button></li>
     <li><button class = type onclick = "btn(), augmented()" id = AugmentedC>Augmented</button></li>
     <li><button class = type onclick = "btn(), diminished()" id = DiminishedC>Diminished</button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li>Inversion:</li>
     <li><button class = question onclick = "btn(), infoInversionC()" id = inversionInfoC><strong>?</strong></button></li>
-    <br> <br>
+    <br class = line> <br class = line>
     <!--Has inversion buttons-->
     <li><button class = type onclick = "btn(), root()" id = RootC>Root</button></li>
     <li><button class = type onclick = "btn(), first()" id = 1stC>  1st  </button></li>
     <li><button class = type onclick = "btn(), second()" id = 2ndC>  2nd  </button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li><button onclick = "btn(), nextChord(), notation()" class = Done><i class="fa fa-check"></i></button></li>
     <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
   </ul>
@@ -428,23 +428,23 @@ alt l, alt o
       </select>
     </li>
     <li><button class = question onclick = "btn(), infoKeyA()" id = keyInfoA><strong>?</strong></button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li>Type:</li>
     <li><button class = question onclick = "btn(), infoTypeA()" id = typeInfoA><strong>?</strong></button></li>
-    <br> <br>
+    <br class = line> <br class = line>
     <li><button class = type onclick = "btn(), majorA()" id = MajorArr>Major</button></li>
     <li><button class = type onclick = "btn(), minorA()" id = MinorArr>Minor</button></li>
-    <br> <br> <br>
+    <br class = line> <br class = line> <br class = line>
     <li>Inversion:</li>
     <li><button class = question onclick = "btn(), infoInversionA()" id = inversionInfoA><strong>?</strong></button></li>
-    <br> <br>
+    <br class = line> <br class = line>
     <li><button class = type onclick = "btn(), rootA()" id = RootArr>Root</button></li>
     <li><button class = type onclick = "btn(), firstA()" id = 1stArr>  1st  </button></li>
     <li><button class = type onclick = "btn(), secondA()" id = 2ndArr>  2nd  </button></li>
-    <br> <br> <br> 
+    <br class = line> <br class = line> <br class = line> 
     <li>Speed:
       <li><button class = question onclick = "btn(), infoSpeedA()" id = speedInfoA><strong>?</strong></button></li>
-      <br> <br>
+      <br class = line> <br class = line>
       <input id = slidea type="range" min="30" max="500" value="100" oninput="rangeValuea.innerText = this.value">
       <p id="rangeValuea">150</p>
     </li>
@@ -483,27 +483,27 @@ alt l, alt o
       </select>
     </li>
     <li><button class = question onclick = "btn(), infoKeyCad()" id = keyInfoCad><strong>?</strong></button></li>
-    <br><br>
+    <br  class = line><br  class = line>
     <li>Type:</li>
     <li><button class = question onclick = "btn(), infoTypeCad()" id = typeInfoCad><strong>?</strong></button></li>
-    <br><br>
+    <br  class = line><br  class = line>
     <!--  <li><button class = question onclick = "btn(), infoKeyA()" id = keyInfoA><strong>?</strong></button></li>
-    <br> <br> <br> -->
+    <br  class = line> <br  class = line> <br  class = line> -->
     <li><button class = type onclick = "btn(), majorCad()" id = majorCad>Major</button></li>
     <li><button class = type onclick = "btn(), minorCad()" id = minorCad>Minor</button></li>
-    <br><br>
+    <br  class = line><br  class = line>
     <li>Cadence:</li>
     <li><button class = question onclick = "btn(), infoCadCad()" id = cadInfoCad><strong>?</strong></button></li>
-    <br><br>  
+    <br  class = line><br  class = line>  
     <!--Has buttons to select type of cadence-->
     <li><button class = type onclick = "btn(), perfect()" id = perfect>Perfect</button></li>
     <li><button class = type onclick = "btn(), imperfect()" id = imperfect>Imperfect</button></li>
     <li><button class = type onclick = "btn(), plagal()" id = plagal>Plagal</button></li>
-    <br><br>
+    <br  class = line><br  class = line>
     <li><button class = type onclick = "btn(), half()" id = half>Half</button></li>
     <li><button class = type onclick = "btn(), deceptive()" id = deceptive>Deceptive</button></li>
     <!--<li><button class = type onclick = "btn(), phrygian()" id = phrygian>Phrygian</button></li>-->
-    <br><br><br>
+    <br  class = line><br  class = line><br  class = line>
     <li><button onclick = "btn(), notation(), nextCadence()" class = Done><i class="fa fa-check"></i></button></li>
     <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
   </ul>
@@ -636,25 +636,25 @@ Also stores the grand staff that the music is printed on-->
       </select>
     </li>
     <li><button class = question onclick = "btn(), infoKeyC7()" id = keyInfoC7><strong>?</strong></button></li>
-    <br> <br> <br>
+    <br  class = line> <br  class = line> <br  class = line>
     <li>Type:</li>
     <li><button class = question onclick = "btn(), infoTypeC7()" id = typeInfoC7><strong>?</strong></button></li>
-    <br> <br>
+    <br  class = line> <br  class = line>
     <li><button class = type onclick = "btn(), majorC7()" id = MajorC7>Major</button></li>
     <li><button class = type onclick = "btn(), minorC7()" id = MinorC7>Minor</button></li>
     <li><button class = type onclick = "btn(), dominantC7()" id = DominantC7>Dominant</button></li>
     <li><button class = type onclick = "btn(), augmentedC7()" id = AugmentedC7>Augmented</button></li>
     <li><button class = type onclick = "btn(), halfdiminishedC7()" id = HalfDiminishedC7>Half Diminished</button></li>
     <li><button class = type onclick = "btn(), diminishedC7()" id = DiminishedC7>Diminished</button></li>
-    <br> <br> <br>
+    <br  class = line> <br  class = line> <br  class = line>
     <li>Inversion:</li>
     <li><button class = question onclick = "btn(), infoInversionC7()" id = inversionInfoC7><strong>?</strong></button></li>
-    <br> <br>
+    <br  class = line> <br  class = line>
     <li><button class = type onclick = "btn(), root7()" id = RootC7>Root</button></li>
     <li><button class = type onclick = "btn(), first7()" id = 1stC7>  1st  </button></li>
     <li><button class = type onclick = "btn(), second7()" id = 2ndC7>  2nd  </button></li>
     <li><button class = type onclick = "btn(), third7()" id = 3rdC7>  3rd  </button></li>
-    <br> <br> <br>
+    <br  class = line> <br  class = line> <br  class = line>
     <li><button onclick = "btn(), nextChord7(), notation()" class = Done><i class="fa fa-check"></i></button></li>
     <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
   </ul>
@@ -687,25 +687,25 @@ Also stores the grand staff that the music is printed on-->
       </select>
     </li>
     <li><button class = question onclick = "btn(), infoKeyA7()" id = keyInfoA7><strong>?</strong></button></li>
-    <br> <br> <br>
+    <br  class = line> <br  class = line> <br  class = line>
     <li>Type:</li>
     <li><button class = question onclick = "btn(), infoTypeA7()" id = typeInfoA7><strong>?</strong></button></li>
-    <br> <br>
+    <br  class = line> <br  class = line>
     <li><button class = type onclick = "btn(), majorA7()" id = MajorA7>Major</button></li>
     <li><button class = type onclick = "btn(), minorA7()" id = MinorA7>Minor</button></li>
     <li><button class = type onclick = "btn(), dominantA7()" id = DominantA7>Dominant</button></li>
-    <br> <br> <br>
+    <br  class = line> <br  class = line> <br  class = line>
     <li>Inversion:</li>
     <li><button class = question onclick = "btn(), infoInversionA7()" id = inversionInfoA7><strong>?</strong></button></li>
-    <br> <br>
+    <br  class = line> <br  class = line>
     <li><button class = type onclick = "btn(), rootA7()" id = RootA7>Root</button></li>
     <li><button class = type onclick = "btn(), firstA7()" id = 1stA7>1st</button></li>
     <li><button class = type onclick = "btn(), secondA7()" id = 2ndA7>2nd</button></li>
     <li><button class = type onclick = "btn(), thirdA7()" id = 3rdA7>3rd</button></li>
-    <br> <br> <br> 
+    <br  class = line> <br  class = line> <br  class = line> 
     <li>Speed:
       <li><button class = question onclick = "btn(), infoSpeedA7()" id = speedInfoA7><strong>?</strong></button></li>
-      <br> <br>
+      <br  class = line> <br  class = line>
       <input id = slidea7 type="range" min="30" max="500" value="100" oninput="rangeValuea7.innerText = this.value">
       <p id="rangeValuea7">150</p>
     </li>
@@ -782,23 +782,23 @@ Also stores the grand staff that the music is printed on-->
     <h1>The Ultimate Guide to Piano Techniques</h1>
     <p>Scales: Learning scales is essential for building a strong foundation in piano playing. They help develop an understanding of key signatures and the layout of the piano. 
       To play scales effectively, start with a comfortable hand position and practice using proper fingering. Gradually increase your speed to improve agility and accuracy.
-      <br><br>
+      <br  class = line><br  class = line>
       Chords: Chords provide the foundation for harmony and are extensively used in the accompaniment of piano pieces through arpeggios, blocked chords, and alternating chords. 
       To improve at playing chords, make sure your hands are relaxed and practice chord progressions. Learn the basic chord types like major and minor and their inversions. 
       Triads should be played with the fingering 1-3-5.
-      <br><br>
+      <br  class = line><br  class = line>
       Arpeggios: Arpeggios are broken chords that allow pianists to explore the individual notes within a chord. They are commonly used in accompaniments and require precise movements and many stretches. 
       Good fingerings include 1-2-3 with 5 at the complete top and 2-1-2-3 depending on the arpeggio.
-      <br><br>
+      <br  class = line><br  class = line>
       7th Chords and Arpeggios: Seventh chords add an extra note on top of the three-note chord (triad) and add complexity to harmonies. They are often used in jazz. 
       For 7th arpeggios, use the fingering 1-2-3-4 and at the complete top, use 5. 7th chords can be played with 1-2-3-5.
-      <br><br>
+      <br  class = line><br  class = line>
       Blocked and Alternating Arpeggios: Blocked arpeggios are chords played in the format of arpeggios that span multiple octaves. 
       Alternating arpeggios are played in this pattern: 1st note, 3rd note, 2nd note, 4th note for every ascending octave.
-      <br><br>
+      <br  class = line><br  class = line>
       Cadences: Cadences are melodic and harmonic patterns that provide resolution at the end of a coda or section of music. 
       They are sequences of chords that convey a tonal or emotional resolution. Study the cadence types and make sure you can recognize them in music.
-      <br><br>
+      <br  class = line><br  class = line>
       Scales in 3rds and 6ths: Playing scales in 3rds or 6ths helps pianists develop finger independence, coordination, and aural awareness of intervals. 
       To play scales in 3rds, your left hand should start on the tonic and your right hand should start on the 3rd note of the scale. 
       For scales in 6ths, your left hand will start on the 3rd note of the scale and your right hand will start on the tonic. Play both hands together and make sure they maintain consistent speed.    
@@ -814,90 +814,90 @@ Also stores the grand staff that the music is printed on-->
     <h1>The Ultimate Guide to Music Theory</h1>
     <p>Modes: Modes are scales that start on different notes of a scale, not necessarily the tonic. 
       The modes are Ionian (1), Dorian (2), Phrygian (3), Lydian (4), Mixolydian (5), Aeolian (6), and Locrian (7). To remember them, you can use the phrase: "I Don't Particularly Like Modes A Lot."
-      <br><br>
+      <br  class = line><br  class = line>
       Sections of Music: In music, there are different sections with specific characteristics. 
       An interlude is a brief section, a bridge acts as a transitional passage, a refrain is a repeated section with slight variations, a chorus is the main repeated part, 
       a verse contains the main lyrics, a coda provides closure at the end of a piece, and a codetta is a shorter ending. The opening of a piece is called the exposition.
-      <br><br>
+      <br  class = line><br  class = line>
       Roman Numerals: To determine the Roman numeral of a chord, you find the tonic of the chord and assign the corresponding numeral. 
       In major, the pattern is: I, ii, iii, IV, V, vi, vii°. In minor, the pattern is: i, ii°, III, iv, v, VI, VII.
-      <br><br>
+      <br  class = line><br  class = line>
       Roman Numeral Inversions: A 7 after a Roman numeral indicates a seventh chord. The inversions are represented as 6/5 (first inversion), 4/3 (second inversion), and 4/2 (third inversion). 
       A 6 after a Roman numeral indicates a first inversion triad, and 64 indicates a second inversion triad. The symbol ° represents a fully diminished chord, and ø represents a half-diminished chord. 
       A diminished 7th chord is formed by adding a minor third to a diminished chord, and a half-diminished 7th chord is formed by adding a major third to a diminished chord.
-      <br><br>
+      <br  class = line><br  class = line>
       Key/Time Signature and Identifying the Key: The time signature consists of two numbers, where the top number indicates the number of beats per measure, and the bottom number represents the 
       note value that receives one beat. In the key signature, flats are listed from left to right in the order B-E-A-D-G-C-F, while sharps are listed from left to right in the opposite order. 
       The major key can be found by looking at the second-to-last flat or going up a half step from the rightmost sharp. To determine the relative minor key, go down three half steps from the major key.
-      <br><br>
+      <br  class = line><br  class = line>
       Intervals and Positions: Intervals are the distances between two pitches. Major intervals are represented by M, and minor intervals by m. The order of intervals is as follows: 
       unison, major 2nd, minor 2nd, major 3rd, minor 3rd, perfect 4th, tritone, perfect 5th, minor 6th, major 6th, minor 7th, major 7th, and octave. In the context of a key, specific positions are 
       assigned to each scale degree: 1 is the tonic, 2 is the supertonic, 3 is the mediant, 4 is the subdominant, 5 is the dominant, 6 is the submediant, and 7 is the leading tone.
-      <br><br>
+      <br  class = line><br  class = line>
       Dynamics and Tempo: Dynamics refer to the volume or intensity of the music. The order of dynamics from quietest to loudest is: pp (pianissimo), p (piano), mp (mezzo-piano), mf (mezzo-forte), 
       f (forte), and ff (fortissimo). Symbols such as sf or > indicate short moments of loudness. A crescendo gradually increases the volume, while a decrescendo (or diminuendo) gradually decreases it. 
       Tempo refers to the speed of the music. The general order of tempo from slowest to fastest is: grave, largo, adagio, andante, moderato, allegro, vivace, and presto. 
       Terms like accelerando indicate a gradual increase in speed, while ritardando and rubato signify a gradual slowing down of the music, allowing for more expressive shaping. 
       Legato and slurs indicate smooth and connected notes, while staccato represents short and detached notes.
-      <br><br>
+      <br  class = line><br  class = line>
       Rhythmic Devices: Pickup notes, also known as anacrusis, are notes that occur before the first strong downbeat of a measure. Syncopation is the accentuation of weak beats and off-beat rhythms. 
       Cross-rhythms are combinations of two or more conflicting rhythms. Hemiola refers to a rhythmic pattern with a ratio of 2:3 in terms of beats.
-      <br><br>
+      <br  class = line><br  class = line>
       Melody and Timbre: Melodic contour refers to the shape of a melody, whether it moves predominantly in stepwise motion (conjunct) or leaps (disjunct). 
       Range refers to the span of pitches an instrument or voice can play, while register indicates the specific position within that range.
-      <br><br>
+      <br  class = line><br  class = line>
       Texture: Texture refers to how musical components combine to create the overall sound. Diatonic texture implies a composition is primarily within the key, while chromatic texture incorporates 
       accidentals and pitches outside of the key. Monophony features a single melodic line, homophony involves multiple voices with one main melody, polyphony incorporates multiple melodies or 
       imitative melodies, and heterophony resembles homophony but with slight variations or embellishments.
-      <br><br>
+      <br  class = line><br  class = line>
       Texture Devices: Alberti bass is a specific pattern (1, 3, 5, 3) commonly used in the bass part. Walking bass outlines the harmony and is frequently found in jazz music. Imitation involves 
       repeating a musical pattern in different keys or voices. Canon involves layering a melody on top of itself with a time delay. Counter-melody refers to the simultaneous playing of a secondary 
       melody alongside the main melody. Ostinato represents a repeating pattern throughout a piece. Doubling occurs when two instruments play the same musical line. The downbeat is the first beat of a measure. 
       A round or a round/figure refers to a canon repeated by multiple voices.
-      <br><br>
+      <br  class = line><br  class = line>
       Scale Types: There are various types of scales used in music. The major scale follows the pattern of whole step, whole step, half step, whole step, whole step, whole step, and half step. 
       The natural minor scale follows the pattern of whole step, half step, whole step, whole step, half step, whole step, and whole step. The harmonic minor scale has the pattern of whole step, 
       half step, whole step, whole step, half step, one and a half steps, and half step. The melodic minor scale raises the 6th and 7th scale degrees when ascending and lowers them when descending. 
       The chromatic scale consists of all half steps, while the pentatonic scale consists of five notes with whole steps and skips. Interval refers to the distance between two pitches. 
       Melodic intervals occur successively, while harmonic intervals are played simultaneously as chords.
-      <br><br>
+      <br  class = line><br  class = line>
       Voice Leading and Part-Writing: Melodic contour refers to the overall direction of a melody, including ascending, descending, or staying the same. Common-tone refers to when a melody maintains the 
       same pitch between two chords. Harmonic counterpoint involves different types of relationships between two voices: contrary motion (moving in opposite directions), oblique motion (one voice stays the 
       same while the other moves), similar motion (both voices move in the same direction), and parallel motion (both voices move in the same direction while maintaining a consistent interval between them). 
       In four-part writing (SATB), the soprano, alto, tenor, and bass parts follow a specific pattern of voice leading. Various rules apply, such as avoiding parallel fifths or octaves, not doubling 
       the leading tone, avoiding doubling the third of a chord, and resolving the chordal seventh appropriately.
-      <br><br>
+      <br  class = line><br  class = line>
       6/4 Chords: 6/4 chords have different functions and are classified into passing, pedal, arpeggiated, and cadential. These chords typically serve as weaker predominants leading to dominant chords.
-      <br><br>
+      <br  class = line><br  class = line>
       Non-Chord Tones: Non-chord tones are melodic notes that do not belong to the underlying harmony. Examples include passing tones, neighbor tones, appoggiaturas, escape tones, double neighbors, anticipations, 
       pedal points, suspensions, and retardations. Accented non-chord tones occur on the beat, while unaccented non-chord tones occur on weak parts of the beat (offbeats). Counterpoint refers to the interaction of 
       two or more melodic lines. Perfect consonances include the unison, perfect fifth, and octave. Imperfect consonances include thirds and sixths. Dissonances include seconds, fourths, sevenths, as well as 
       diminished and augmented intervals. Metrical durations are equal to the duration of a beat, while submetrical durations are smaller and supermetrical durations are larger.
-      <br><br>
+      <br  class = line><br  class = line>
       Motives: Motives are small melodic or rhythmic ideas or fragments. When a motive is repeated exactly, it is called literal repetition. Augmentation and diminution involve increasing or decreasing the 
       rhythmic values of a motive, respectively. Sequence refers to the restatement of a motive at a different pitch level (transposed up or down). Inversion refers to a motive played in an opposite direction.
-      <br><br>
+      <br  class = line><br  class = line>
       Secondary Dominance: Secondary dominance is a harmonic technique that temporarily changes the key and introduces new accidentals. For example, V/ii indicates the dominant chord of the key of ii.
-      <br><br>
+      <br  class = line><br  class = line>
       Ornaments: Ornaments are embellishments added to the main melody or harmony to enhance the musical expression. Some common ornaments include trills (rapid alternation between two adjacent notes), 
       turns (a series of rapid notes around a central pitch), mordents (a quick alternation between a note and its lower or upper neighbor), and grace notes (brief, decorative notes played before a main note).
-      <br><br>
+      <br  class = line><br  class = line>
       Form: Musical form refers to the overall structure and organization of a piece of music. Some common forms include binary form (two-part form with two contrasting sections, often labeled as A and B), 
       ternary form (three-part form with a contrasting middle section, often labeled as ABA), theme and variations (a theme followed by a series of variations based on that theme), and rondo form 
       (a recurring theme alternating with contrasting sections).
-      <br><br>
+      <br  class = line><br  class = line>
       Cadences: Cadences are melodic or harmonic progressions that provide a sense of resolution or closure within a musical phrase or section. Common cadences include the authentic cadence (V-I or V-i), 
       plagal cadence (IV-I or iv-i), half cadence (ending on the dominant chord), and deceptive cadence (V-vi or V-VI).
-      <br><br>
+      <br  class = line><br  class = line>
       Musical Notation: Standard music notation includes various symbols and markings to convey musical information. Some important symbols include the treble clef (indicating the range for higher-pitched 
       instruments or voices), the bass clef (indicating the range for lower-pitched instruments or voices), time signatures (indicating the number of beats per measure and the type of note that receives one beat), 
       dynamics markings (indicating the volume or intensity of the music), articulation marks (such as staccato dots or legato lines indicating how the notes should be played), and expression marks (such as 
       crescendo or diminuendo indicating changes in volume or intensity).
-      <br><br>
+      <br  class = line><br  class = line>
       Music Theory Tools: Music theory provides various tools and techniques for analyzing and understanding music. Some important tools include harmonic analysis (examining the chords and harmonic progressions 
       in a piece), melodic analysis (analyzing the contour, intervals, and phrasing of a melody), formal analysis (identifying and understanding the structure and organization of a piece), and chord progressions 
       (common sequences of chords that create harmonic movement and tension/resolution).
-      <br><br>
+      <br  class = line><br  class = line>
       This is just a brief overview of some important concepts in music theory. The study of music theory is extensive and encompasses many more topics and details.
       </p>
   </div>
