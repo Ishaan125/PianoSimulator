@@ -3774,7 +3774,8 @@ function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
     plays('#E4', 1000, 0.1); plays('#Ab4', 1000, 0.11); plays('#C5', 1000, 0.111); plays('#D4', 1000, 0.1111);plays('#E4', 1000, 4.4); plays('#Ab4', 1000, 5.6); plays('#C5', 1000, 6.8); plays('#D4', 1000, 3.2);keySig(4, false)}
   else if (keyNoteC7 == '/F' && typeNoteC7 == 3 && inversionC7 == 3) {
     plays('#F4', 1000, 0.1); plays('#A5', 1000, 0.11); plays('#Db5', 1000, 0.111); plays('#Eb4', 1000, 0.1111);plays('#F4', 1000, 4.4); plays('#A5', 1000, 5.6); plays('#Db5', 1000, 6.8); plays('#Eb4', 1000, 3.2);keySig(1, true)}
-  else if (keyNoteC7 == '/Gb' && typeNoteC7 == 3 && inversionC7 == 3) {
+  else if (keyNoteC7 == '/Gb' 
+&& typeNoteC7 == 3 && inversionC7 == 3) {
     plays('#Gb4', 1000, 0.1); plays('#Bb5', 1000, 0.11); plays('#D5', 1000, 0.111); plays('#E4', 1000, 0.1111);plays('#Gb4', 1000, 4.4); plays('#Bb5', 1000, 5.6); plays('#D5', 1000, 6.8); plays('#E4', 1000, 3.2);keySig(6, true)}
   else if (keyNoteC7 == '/G' && typeNoteC7 == 3 && inversionC7 == 3) {
     plays('#G4', 1000, 0.1); plays('#B5', 1000, 0.11); plays('#Eb5', 1000, 0.111); plays('#F4', 1000, 0.1111);plays('#G4', 1000, 4.4); plays('#B5', 1000, 5.6); plays('#Eb5', 1000, 6.8); plays('#F4', 1000, 3.2);keySig(1, false)}
