@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <!--Setting up the page-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Linking the HTML with the CSS and JS-->
+  <title>Piano Simulator</title>
+  <link href="Hi.css" rel="stylesheet"/>
+  <script src="Main.js" defer></script>
+
+  <!--Used this for the icons in the side panel-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <!--https://www.w3schools.com/icons/fontawesome_icons_intro.asp-->
+
+</head>
+
+<body>
+  <!--Piano notes-->
+  <div class="piano">
+    <div id = "#A" data-note="A" class="key white"></div>
+    <div id = "#Bb" data-note="Bb" class="key black"></div>
+    <div id = "#B" data-note="B" class="key white move"></div>
+    <div id = "#C" data-note="C" class="key white"></div>
+    <div id = "#Db" data-note="Db" class="key black"></div>
+    <div id = "#D" data-note="D" class="key white"></div>
+    <div id = "#Eb" data-note="Eb" class="key black"></div>
+    <div id = "#E" data-note="E" class="key white move"></div>
+    <div id = "#F" data-note="F" class="key white"></div>
+    <div id = "#Gb" data-note="Gb" class="key black"></div>
+    <div id = "#G" data-note="G" class="key white"></div>
+    <div id = "#Ab" data-note="Ab" class="key black"></div>
+    <div id = "#A2" data-note="A2" class="key white"></div>
+    <div id = "#Bb2" data-note="Bb2" class="key black"></div>
+    <div id = "#B2" data-note="B2" class="key white move"></div>
+    <div id = "#C2" data-note="C2" class="key white"></div>
+    <div id = "#Db2" data-note="Db2" class="key black"></div>
+    <div id = "#D2" data-note="D2" class="key white"></div>
+    <div id = "#Eb2" data-note="Eb2" class="key black"></div>
+    <div id = "#E2" data-note="E2" class="key white move"></div>
+    <div id = "#F2" data-note="F2" class="key white"></div>
+    <div id = "#Gb2" data-note="Gb2" class="key black"></div>
+    <div id = "#G2" data-note="G2" class="key white"></div>
+    <div id = "#Ab2" data-note="Ab2" class="key black"></div>
+    <div id = "#A3" data-note="A3" class="key white"></div>
+    <div id = "#Bb3" data-note="Bb3" class="key black"></div>
+    <div id = "#B3" data-note="B3" class="key white move"></div>
+    <div id = "#C3" data-note="C3" class="key white"></div>
+    <div id = "#Db3" data-note="Db3" class="key black"></div>
+    <div id = "#D3" data-note="D3" class="key white"></div>
+    <div id = "#Eb3" data-note="Eb3" class="key black"></div>
+    <div id = "#E3" data-note="E3" class="key white move"></div>
+    <div id = "#F3" data-note="F3" class="key white"></div>
+    <div id = "#Gb3" data-note="Gb3" class="key black"></div>
+    <div id = "#G3" data-note="G3" class="key white"></div>
+    <div id = "#Ab3" data-note="Ab3" class="key black"></div>
+    <div id = "#A4" data-note="A4" class="key white"></div>
+    <div id = "#Bb4" data-note="Bb4" class="key black"></div>
+    <div id = "#B4" data-note="B4" class="key white move"></div>
+    <div id = "#C4" data-note="C4" class="key white"></div>
+    <div id = "#Db4" data-note="Db4" class="key black"></div>
+    <div id = "#D4" data-note="D4" class="key white"></div>
+    <div id = "#Eb4" data-note="Eb4" class="key black"></div>
+    <div id = "#E4" data-note="E4" class="key white move"></div>
+    <div id = "#F4" data-note="F4" class="key white"></div>
+    <div id = "#Gb4" data-note="Gb4" class="key black"></div>
+    <div id = "#G4" data-note="G4" class="key white"></div>
+    <div id = "#Ab4" data-note="Ab4" class="key black"></div>
+    <div id = "#A5" data-note="A5" class="key white"></div>
+    <div id = "#Bb5" data-note="Bb5" class="key black"></div>
+    <div id = "#B5" data-note="B5" class="key white move"></div>
+    <div id = "#C5" data-note="C5" class="key white"></div>
+    <div id = "#Db5" data-note="Db5" class="key black"></div>
+    <div id = "#D5" data-note="D5" class="key white"></div>
+    <div id = "#Eb5" data-note="Eb5" class="key black"></div>
+    <div id = "#E5" data-note="E5" class="key white move"></div>
+    <div id = "#F5" data-note="F5" class="key white"></div>
+    <div id = "#Gb5" data-note="Gb5" class="key black"></div>
+    <div id = "#G5" data-note="G5" class="key white"></div>
+    <div id = "#Ab5" data-note="Ab5" class="key black"></div>
+    <div id = "#A6" data-note="A6" class="key white"></div>
+    <div id = "#Bb6" data-note="Bb6" class="key black"></div>
+    <div id = "#B6" data-note="B6" class="key white move"></div>
+    <div id = "#C6" data-note="C6" class="key white"></div>
+    <div id = "#Db6" data-note="Db6" class="key black"></div>
+    <div id = "#D6" data-note="D6" class="key white"></div>
+    <div id = "#Eb6" data-note="Eb6" class="key black"></div>
+    <div id = "#E6" data-note="E6" class="key white move"></div>
+    <div id = "#F6" data-note="F6" class="key white"></div>
+    <div id = "#Gb6" data-note="Gb6" class="key black"></div>
+    <div id = "#G6" data-note="G6" class="key white"></div>
+    <div id = "#Ab6" data-note="Ab6" class="key black"></div>
+    <div id = "#A7" data-note="A7" class="key white"></div>
+    <div id = "#Bb7" data-note="Bb7" class="key black"></div>
+    <div id = "#B7" data-note="B7" class="key white move"></div>
+    <div id = "#C7" data-note="C7" class="key white"></div>
+    <div id = "#Db7" data-note="Db7" class="key black"></div>
+    <div id = "#D7" data-note="D7" class="key white"></div>
+    <div id = "#Eb7" data-note="Eb7" class="key black"></div>
+    <div id = "#E7" data-note="E7" class="key white move"></div>
+    <div id = "#F7" data-note="F7" class="key white"></div>
+    <div id = "#Gb7" data-note="Gb7" class="key black"></div>
+    <div id = "#G7" data-note="G7" class="key white"></div>
+    <div id = "#Ab7" data-note="Ab7" class="key black"></div>
+    <div id = "#A8" data-note="A8" class="key white"></div>
+    <div id = "#Bb8" data-note="Bb8" class="key black"></div>
+    <div id = "#B8" data-note="B8" class="key white move"></div>
+    <div id = "#C8" data-note="C8" class="key white"></div>
+  </div>
+
+  <!--Audio for all of the notes-->
+  <audio id="A" src="notes/0-a.wav"></audio>
+  <audio id="Bb" src="notes/0-as.wav"></audio>
+  <audio id="B" src="notes/0-b.wav"></audio>
+  <audio id="C" src="notes/1-c.wav"></audio>
+  <audio id="Db" src="notes/1-cs.wav"></audio>
+  <audio id="D" src="notes/1-d.wav"></audio>
+  <audio id="Eb" src="notes/1-ds.wav"></audio>
+  <audio id="E" src="notes/1-e.wav"></audio>
+  <audio id="F" src="notes/1-f.wav"></audio>
+  <audio id="Gb" src="notes/1-fs.wav"></audio>
+  <audio id="G" src="notes/1-g.wav"></audio>
+  <audio id="Ab" src="notes/1-gs.wav"></audio>
+  <audio id="A2" src="notes/1-a.wav"></audio>
+  <audio id="Bb2" src="notes/1-as.wav"></audio>
+  <audio id="B2" src="notes/1-b.wav"></audio>
+  <audio id="C2" src="notes/2-c.wav"></audio>
+  <audio id="Db2" src="notes/2-cs.wav"></audio>
+  <audio id="D2" src="notes/2-d.wav"></audio>
+  <audio id="Eb2" src="notes/2-ds.wav"></audio>
+  <audio id="E2" src="notes/2-e.wav"></audio>
+  <audio id="F2" src="notes/2-f.wav"></audio>
+  <audio id="Gb2" src="notes/2-fs.wav"></audio>
+  <audio id="G2" src="notes/2-g.wav"></audio>
+  <audio id="Ab2" src="notes/2-gs.wav"></audio>
+  <audio id="A3" src="notes/2-a.wav"></audio>
+  <audio id="Bb3" src="notes/2-as.wav"></audio>
+  <audio id="B3" src="notes/2-b.wav"></audio>
+  <audio id="C3" src="notes/3-c.wav"></audio>
+  <audio id="Db3" src="notes/3-cs.wav"></audio>
+  <audio id="D3" src="notes/3-d.wav"></audio>
+  <audio id="Eb3" src="notes/3-ds.wav"></audio>
+  <audio id="E3" src="notes/3-e.wav"></audio>
+  <audio id="F3" src="notes/3-f.wav"></audio>
+  <audio id="Gb3" src="notes/3-fs.wav"></audio>
+  <audio id="G3" src="notes/3-g.wav"></audio>
+  <audio id="Ab3" src="notes/3-gs.wav"></audio>
+  <audio id="A4" src="notes/3-a.wav"></audio>
+  <audio id="Bb4" src="notes/3-as.wav"></audio>
+  <audio id="B4" src="notes/3-b.wav"></audio>
+  <audio id="C4" src="notes/4-c.wav"></audio>
+  <audio id="Db4" src="notes/4-cs.wav"></audio>
+  <audio id="D4" src="notes/4-d.wav"></audio>
+  <audio id="Eb4" src="notes/4-ds.wav"></audio>
+  <audio id="E4" src="notes/4-e.wav"></audio>
+  <audio id="F4" src="notes/4-f.wav"></audio>
+  <audio id="Gb4" src="notes/4-fs.wav"></audio>
+  <audio id="G4" src="notes/4-g.wav"></audio>
+  <audio id="Ab4" src="notes/4-gs.wav"></audio>
+  <audio id="A5" src="notes/4-a.wav"></audio>
+  <audio id="Bb5" src="notes/4-as.wav"></audio>
+  <audio id="B5" src="notes/4-b.wav"></audio>
+  <audio id="C5" src="notes/5-c.wav"></audio>
+  <audio id="Db5" src="notes/5-cs.wav"></audio>
+  <audio id="D5" src="notes/5-d.wav"></audio>
+  <audio id="Eb5" src="notes/5-ds.wav"></audio>
+  <audio id="E5" src="notes/5-e.wav"></audio>
+  <audio id="F5" src="notes/5-f.wav"></audio>
+  <audio id="Gb5" src="notes/5-fs.wav"></audio>
+  <audio id="G5" src="notes/5-g.wav"></audio>
+  <audio id="Ab5" src="notes/5-gs.wav"></audio>
+  <audio id="A6" src="notes/5-a.wav"></audio>
+  <audio id="Bb6" src="notes/5-as.wav"></audio>
+  <audio id="B6" src="notes/5-b.wav"></audio>
+  <audio id="C6" src="notes/6-c.wav"></audio>
+  <audio id="Db6" src="notes/6-cs.wav"></audio>
+  <audio id="D6" src="notes/6-d.wav"></audio>
+  <audio id="Eb6" src="notes/6-ds.wav"></audio>
+  <audio id="E6" src="notes/6-e.wav"></audio>
+  <audio id="F6" src="notes/6-f.wav"></audio>
+  <audio id="Gb6" src="notes/6-fs.wav"></audio>
+  <audio id="G6" src="notes/6-g.wav"></audio>
+  <audio id="Ab6" src="notes/6-gs.wav"></audio>
+  <audio id="A7" src="notes/6-a.wav"></audio>
+  <audio id="Bb7" src="notes/6-as.wav"></audio>
+  <audio id="B7" src="notes/6-b.wav"></audio>
+  <audio id="C7" src="notes/7-c.wav"></audio>
+  <audio id="Db7" src="notes/7-cs.wav"></audio>
+  <audio id="D7" src="notes/7-d.wav"></audio>
+  <audio id="Eb7" src="notes/7-ds.wav"></audio>
+  <audio id="E7" src="notes/7-e.wav"></audio>
+  <audio id="F7" src="notes/7-f.wav"></audio>
+  <audio id="Gb7" src="notes/7-fs.wav"></audio>
+  <audio id="G7" src="notes/7-g.wav"></audio>
+  <audio id="Ab7" src="notes/7-gs.wav"></audio>
+  <audio id="A8" src="notes/7-a.wav"></audio>
+  <audio id="Bb8" src="notes/7-as.wav"></audio>
+  <audio id="B8" src="notes/7-b.wav"></audio>
+  <audio id="C8" src="notes/8-c.wav"></audio>
+
+  <!--  
+<div class = "box">
+  <div id = "q1" class = "shape"></div>
+  <div id = "q2" class = "shape"></div>
+  <div id = "q3" class = "shape"></div>
+</div>
+ -->
+
+ <!--All of the buttons that are in the side panel-->
+<div class = "menu">
+  <ul>
+    <li><button id = scales class="technique" onclick = "btn()"><i class="fa fa-music"></i>Scales</button></li>
+    <br class = line>
+    <li><button id = chords class="technique" onclick = "btn()"><i class="fa fa-bars"></i>Chords</button></li>
+    <br class = line>
+    <li><button id = arpeggios class="technique" onclick = "btn()"><i class="fa fa-spinner"></i>Arpeggios</button></li>
+    <br class = line>
+    <li><button id = 7chords class="technique" onclick = "btn()"><i class="fa fa-bars"></i>7th Chords</button></li>
+    <br class = line>
+    <li><button id = arpeggios7 class="technique" onclick = "btn()"><i class="fa fa-spinner"></i>7th Arpeggios</button></li>
+    <br class = line>
+    <li><button id = keyFind class="technique" onclick = "btn()"><i class="fa fa-search"></i>Key Finder</button></li>
+    <br class = line>
+    <li><button id = cadences class="technique" onclick = "btn()"><i class="fa fa-spotify"></i>Cadences</button></li>
+    <br class = line>
+    <li><button id = other class="technique" onclick = "btn()"><i class="fa fa-plus-circle"></i>Other</button></li>
+  </ul>
+</div>
+
+<!--The black buttons at the top middle of the screen-->
+<div class = "buttons">
+  <button class = extra onclick = "btn(), showLetters()"> Show Keybinds </button>
+  <button class = extra onclick = "btn(), m()"> Metronome </button>
+  <button class = extra onclick = "btn(), pedal()"> Pedal </button>
+  <button class = extra id = theory onclick = "btn(), theory()">Piano Guide</button>
+  <button class = extra id = theory2 onclick = "btn(), theory2()">Music Theory Guide</button>
+</div>
+
+<!--Dark mode button at the top right-->
+<button id = dark onclick = "btn(), dark()">Dark Mode</button>
+
+<!--  
+<div>
+  <span id="rangaeValue">100</span>
+  <Input class="rangae" type="range"
+   value="100" min="10" max="500" onChange="rangeSlide(this.value)"
+    onmousemove="rangeSlide(this.value)"></Input>
+</div>
+<script type="text/javascript">
+  function rangeSlide(value) {
+    document.getElementById("rangaeValue").innerHTML = value;
+  }
+</script>
+<button id = mtClose onclick = "close()"><i class="fa fa-check" style="visibility: hidden;"></i></button>
+ -->
+
+<!--  
+alt l, alt o
+ -->
+
+ <!--Scales in the side panel-->
+<div class="sidebar side">
+  <ul class="nav">
+    <!--Dropdown to select which key-->
+    <li><label for="Key">Key:</label>
+      <select class = dropper id = scaleDrop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <li><button class = question onclick = "btn(), infoKey()" id = keyInfo><strong>?</strong></button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>Type:</li>
+    <li><button class = question onclick = "btn(), infoType()" id = typeInfo><strong>?</strong></button></li>
+    <br class = line> <br class = line>
+    <!--Buttons to select major, minor, or melodic-->
+    <li><button class = type onclick = "btn(), major()" id = MajorS>Major</button></li>
+    <li><button class = type onclick = "btn(), minor()" id = MinorS>Minor</button></li>
+    <li><button class = type onclick = "btn(), melodic()" id = MelodicS>Melodic</button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>Speed:
+      <li><button class = question onclick = "btn(), infoSpeed()" id = speedInfo><strong>?</strong></button></li>
+      <br class = line> <br class = line>
+      <!--Slider to change speed-->
+      <input id = slide type="range" min="30" max="500" value="100" oninput="rangeValue.innerText = this.value">
+      <p id="rangeValue">150</p>
+    </li>
+    <br class = line>
+    <!--Done button to play what you have selected-->
+    <li><button onclick = "btn(), next(), notation()" class = Done><i class="fa fa-check"></i></button></li>
+    <!--Close button to close the button in the side panel and reload the page-->
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+
+<!--Grey buttons with question marks inside of them that show info about the things that are selected-->
+<div class = "infoKey">    
+</div>
+<div class = "infoType">    
+</div>
+<div class = "infoSpeed">    
+</div>
+
+<!--Key finder-->
+<!--Has 2 dropdowns to select key and octave-->
+<div class = "sideKey side">
+  <ul class = nav>
+    <li><label for="Key">Key: </label>
+      <select class = dropper id = "keyDropKey">
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <br class = line> <br class = line> <br class = line>
+    <li><label for="Octave">Octave: </label>
+      <select class = dropper id = "keyDropOctave">
+        <option disabled hidden selected>Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </li>
+    <br class = line> <br class = line> <br class = line>
+    <li><button onclick = "btn(), next2()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+
+<!--Chords-->
+<div class="sideChord side">
+  <ul class="nav">
+    <li><label for="Key">Key:</label>
+      <select class = dropper id = chordDrop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <li><button class = question onclick = "btn(), infoKeyC()" id = keyInfoC><strong>?</strong></button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>Type:</li>
+    <li><button class = question onclick = "btn(), infoTypeC()" id = typeInfoC><strong>?</strong></button></li>
+    <br class = line> <br class = line>
+    <li><button class = type onclick = "btn(), majorC()" id = MajorC>Major</button></li>
+    <li><button class = type onclick = "btn(), minorC()" id = MinorC>Minor</button></li>
+    <li><button class = type onclick = "btn(), augmented()" id = AugmentedC>Augmented</button></li>
+    <li><button class = type onclick = "btn(), diminished()" id = DiminishedC>Diminished</button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>Inversion:</li>
+    <li><button class = question onclick = "btn(), infoInversionC()" id = inversionInfoC><strong>?</strong></button></li>
+    <br class = line> <br class = line>
+    <!--Has inversion buttons-->
+    <li><button class = type onclick = "btn(), root()" id = RootC>Root</button></li>
+    <li><button class = type onclick = "btn(), first()" id = 1stC>  1st  </button></li>
+    <li><button class = type onclick = "btn(), second()" id = 2ndC>  2nd  </button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li><button onclick = "btn(), nextChord(), notation()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+
+<div class = "infoKeyC">    
+</div>
+<div class = "infoTypeC">    
+</div>
+<div class = "infoInversionC">    
+</div>
+
+<!--Arpeggios-->
+<div class="sideArr side">
+  <ul class="nav">
+    <li><label for="Key">Key:</label>
+      <select class = dropper id = arrDrop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <li><button class = question onclick = "btn(), infoKeyA()" id = keyInfoA><strong>?</strong></button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>Type:</li>
+    <li><button class = question onclick = "btn(), infoTypeA()" id = typeInfoA><strong>?</strong></button></li>
+    <br class = line> <br class = line>
+    <li><button class = type onclick = "btn(), majorA()" id = MajorArr>Major</button></li>
+    <li><button class = type onclick = "btn(), minorA()" id = MinorArr>Minor</button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>Inversion:</li>
+    <li><button class = question onclick = "btn(), infoInversionA()" id = inversionInfoA><strong>?</strong></button></li>
+    <br class = line> <br class = line>
+    <li><button class = type onclick = "btn(), rootA()" id = RootArr>Root</button></li>
+    <li><button class = type onclick = "btn(), firstA()" id = 1stArr>  1st  </button></li>
+    <li><button class = type onclick = "btn(), secondA()" id = 2ndArr>  2nd  </button></li>
+    <br class = line> <br class = line> <br class = line> 
+    <li>Speed:
+      <li><button class = question onclick = "btn(), infoSpeedA()" id = speedInfoA><strong>?</strong></button></li>
+      <br class = line> <br class = line>
+      <input id = slidea type="range" min="30" max="500" value="100" oninput="rangeValuea.innerText = this.value">
+      <p id="rangeValuea">150</p>
+    </li>
+    <li><button onclick = "btn(), notation(), nextArpeggio()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+
+<div class = "infoKeyA">    
+</div>
+<div class = "infoTypeA">    
+</div>
+<div class = "infoInversionA">    
+</div>
+<div class = "infoSpeedA">    
+</div>
+
+<!--Cadences-->
+<div class="sideCadence side">
+  <ul class="nav">
+    <li><label for="Key">Key:</label>
+      <select class = dropper id = cadDrop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <li><button class = question onclick = "btn(), infoKeyCad()" id = keyInfoCad><strong>?</strong></button></li>
+    <br  class = line><br  class = line>
+    <li>Type:</li>
+    <li><button class = question onclick = "btn(), infoTypeCad()" id = typeInfoCad><strong>?</strong></button></li>
+    <br  class = line><br  class = line>
+    <!--  <li><button class = question onclick = "btn(), infoKeyA()" id = keyInfoA><strong>?</strong></button></li>
+    <br  class = line> <br  class = line> <br  class = line> -->
+    <li><button class = type onclick = "btn(), majorCad()" id = majorCad>Major</button></li>
+    <li><button class = type onclick = "btn(), minorCad()" id = minorCad>Minor</button></li>
+    <br  class = line><br  class = line>
+    <li>Cadence:</li>
+    <li><button class = question onclick = "btn(), infoCadCad()" id = cadInfoCad><strong>?</strong></button></li>
+    <br  class = line><br  class = line>  
+    <!--Has buttons to select type of cadence-->
+    <li><button class = type onclick = "btn(), perfect()" id = perfect>Perfect</button></li>
+    <li><button class = type onclick = "btn(), imperfect()" id = imperfect>Imperfect</button></li>
+    <li><button class = type onclick = "btn(), plagal()" id = plagal>Plagal</button></li>
+    <br  class = line><br  class = line>
+    <li><button class = type onclick = "btn(), half()" id = half>Half</button></li>
+    <li><button class = type onclick = "btn(), deceptive()" id = deceptive>Deceptive</button></li>
+    <!--<li><button class = type onclick = "btn(), phrygian()" id = phrygian>Phrygian</button></li>-->
+    <br  class = line><br  class = line><br  class = line>
+    <li><button onclick = "btn(), notation(), nextCadence()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+
+<div class = "infoKeyCad">    
+</div>
+<div class = "infoTypeCad">    
+</div>
+<div class = "infoCadCad">    
+</div>
+
+<!--The numerals that show at the bottom of the sheet music when a cadence is played-->
+<p class = numeral id = one><strong></strong></p>
+<p class = numeral id = four><strong></strong></p>
+<p class = numeral id = five><strong></strong></p>
+<p class = numeral id = six><strong></strong></p>
+<!--Ledger lines that print for middle C, high A, B, C, D, E, F-->
+<p class = ledge id = ledge1A style="visibility: hidden;">__</p>
+<p class = ledge id = ledge2A style="visibility: hidden;">__</p>
+<p class = ledge id = ledge3A style="visibility: hidden;">__</p>
+<p class = ledge id = ledge4A style="visibility: hidden;">__</p>
+<p class = ledge id = ledge5A style="visibility: hidden;">__</p>
+<p class = ledge id = ledge1C style="visibility: hidden;">__</p>
+<p class = ledge id = ledge2C style="visibility: hidden;">__</p>
+<p class = ledge id = ledge3C style="visibility: hidden;">__</p>
+<p class = ledge id = ledgeE style="visibility: hidden;">__</p>
+<p class = ledge id = ledgemid1 style="visibility: hidden;">__</p>
+<p class = ledge id = ledgemid2 style="visibility: hidden;">__</p>
+<!--  
+<div class = "infoKeyA">    
+</div>
+ -->
+
+ <!--Stores all of the sharps, flats, and naturals that appear on the sheet music as accidentals or in the key signature. 
+Also stores the grand staff that the music is printed on-->
+<div class = "music" > 
+      
+    <li><img src = "audio/Grand Staff.png" id = grand style="visibility: hidden;"></li>
+
+    <li><img src = "audio/Note.png" class = note id = n1 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n2 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n3 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n4 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n5 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n6 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n7 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n8 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n9 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n10 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n11 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n12 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n13 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n14 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n15 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n16 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n17 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n18 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n19 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n20 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n21 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n22 style="visibility: hidden;"></li>
+    <li><img src = "audio/Note.png" class = note id = n23 style="visibility: hidden;"></li>
+
+    <li><img src = "audio/Sharp.png" class = sharp id = s1 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s2 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s3 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s4 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s5 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s6 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s7 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s8 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s9 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s10 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s11 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s12 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s13 style="visibility: hidden;"></li>
+    <li><img src = "audio/Sharp.png" class = sharp id = s14 style="visibility: hidden;"></li>
+    
+    <li><img src = "audio/Flat.png" class = flat id = b1 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b2 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b3 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b4 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b5 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b6 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b7 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b8 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b9 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b10 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b11 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b12 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b13 style="visibility: hidden;"></li>
+    <li><img src = "audio/Flat.png" class = flat id = b14 style="visibility: hidden;"></li>
+  </ul>
+</div>
+
+<!--The speed plus its word at the top left of the sheet music-->
+<p id = Speed><strong></strong></p>
+<p id = Quart><span>&#9833;</span></p>
+
+<!--Accidentals for minor, melodic minor, augmented, diminished, and dominant-->
+<p class = accident id = acc1><strong></strong></p>
+<p class = accident id = acc2><strong></strong></p>
+<p class = accident id = acc3><strong></strong></p>
+<p class = accident id = acc4><strong></strong></p>
+
+<img src = "audio/Flat.png" class = flat id = acc5 style="visibility: hidden;"></li>
+<img src = "audio/Flat.png" class = flat id = acc6 style="visibility: hidden;"></li>
+<img src = "audio/Flat.png" class = flat id = acc7 style="visibility: hidden;"></li>
+<img src = "audio/Flat.png" class = flat id = acc8 style="visibility: hidden;"></li>
+
+<!--7th Chords-->
+<div class="sideChord7 side">
+  <ul class="nav">
+    <li><label for="Key">Key:</label>
+      <select class = dropper id = 7chordDrop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <li><button class = question onclick = "btn(), infoKeyC7()" id = keyInfoC7><strong>?</strong></button></li>
+    <br  class = line> <br  class = line> <br  class = line>
+    <li>Type:</li>
+    <li><button class = question onclick = "btn(), infoTypeC7()" id = typeInfoC7><strong>?</strong></button></li>
+    <br  class = line> <br  class = line>
+    <li><button class = type onclick = "btn(), majorC7()" id = MajorC7>Major</button></li>
+    <li><button class = type onclick = "btn(), minorC7()" id = MinorC7>Minor</button></li>
+    <li><button class = type onclick = "btn(), dominantC7()" id = DominantC7>Dominant</button></li>
+    <li><button class = type onclick = "btn(), augmentedC7()" id = AugmentedC7>Augmented</button></li>
+    <li><button class = type onclick = "btn(), halfdiminishedC7()" id = HalfDiminishedC7>Half Diminished</button></li>
+    <li><button class = type onclick = "btn(), diminishedC7()" id = DiminishedC7>Diminished</button></li>
+    <br  class = line> <br  class = line> <br  class = line>
+    <li>Inversion:</li>
+    <li><button class = question onclick = "btn(), infoInversionC7()" id = inversionInfoC7><strong>?</strong></button></li>
+    <br  class = line> <br  class = line>
+    <li><button class = type onclick = "btn(), root7()" id = RootC7>Root</button></li>
+    <li><button class = type onclick = "btn(), first7()" id = 1stC7>  1st  </button></li>
+    <li><button class = type onclick = "btn(), second7()" id = 2ndC7>  2nd  </button></li>
+    <li><button class = type onclick = "btn(), third7()" id = 3rdC7>  3rd  </button></li>
+    <br  class = line> <br  class = line> <br  class = line>
+    <li><button onclick = "btn(), nextChord7(), notation()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+<div class = "infoKeyC7">    
+</div>
+<div class = "infoTypeC7">    
+</div>
+<div class = "infoInversionC7">    
+</div>
+
+<!--7th Arpeggios-->
+<div class="sideArr7 side">
+  <ul class="nav">
+    <li><label for="Key">Key:</label>
+      <select class = dropper class = dropper id = arr7Drop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <li><button class = question onclick = "btn(), infoKeyA7()" id = keyInfoA7><strong>?</strong></button></li>
+    <br  class = line> <br  class = line> <br  class = line>
+    <li>Type:</li>
+    <li><button class = question onclick = "btn(), infoTypeA7()" id = typeInfoA7><strong>?</strong></button></li>
+    <br  class = line> <br  class = line>
+    <li><button class = type onclick = "btn(), majorA7()" id = MajorA7>Major</button></li>
+    <li><button class = type onclick = "btn(), minorA7()" id = MinorA7>Minor</button></li>
+    <li><button class = type onclick = "btn(), dominantA7()" id = DominantA7>Dominant</button></li>
+    <br  class = line> <br  class = line> <br  class = line>
+    <li>Inversion:</li>
+    <li><button class = question onclick = "btn(), infoInversionA7()" id = inversionInfoA7><strong>?</strong></button></li>
+    <br  class = line> <br  class = line>
+    <li><button class = type onclick = "btn(), rootA7()" id = RootA7>Root</button></li>
+    <li><button class = type onclick = "btn(), firstA7()" id = 1stA7>1st</button></li>
+    <li><button class = type onclick = "btn(), secondA7()" id = 2ndA7>2nd</button></li>
+    <li><button class = type onclick = "btn(), thirdA7()" id = 3rdA7>3rd</button></li>
+    <br  class = line> <br  class = line> <br  class = line> 
+    <li>Speed:
+      <li><button class = question onclick = "btn(), infoSpeedA7()" id = speedInfoA7><strong>?</strong></button></li>
+      <br  class = line> <br  class = line>
+      <input id = slidea7 type="range" min="30" max="500" value="100" oninput="rangeValuea7.innerText = this.value">
+      <p id="rangeValuea7">150</p>
+    </li>
+    <li><button onclick = "btn(), notation(), nextArpeggio7()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+  </ul>
+</div>
+
+<div class = "infoKeyA7">    
+</div>
+<div class = "infoTypeA7">    
+</div>
+<div class = "infoInversionA7">    
+</div>
+<div class = "infoSpeedA7">    
+</div>
+
+<!--The extra stuff that includes scales in 6ths and 3rds, chromatic scale, and 64 chords-->
+<div class="sideOther side">
+  <ul class="nav">
+    <li>Scales in 3rds and 6ths:</li>
+    <br class = line> <br class = line>
+    <li><label for="Key">Key:</label>
+      <select class = dropper id = otherDrop>
+        <option disabled hidden selected>Select</option>
+        <option value="/Ab">Ab</option>
+        <option value="/A">A</option>
+        <option value="/Bb">Bb</option>
+        <option value="/B">B</option>
+        <option value="/C">C</option>
+        <option value="/Db">Db</option>
+        <option value="/D">D</option>
+        <option value="/Eb">Eb</option>
+        <option value="/E">E</option>
+        <option value="/F">F</option>
+        <option value="/Gb">Gb</option>
+        <option value="/G">G</option>
+      </select>
+    </li>
+    <br class = line> <br class = line>
+    <li>Type:</li>
+    <li><button class = type onclick = "btn(), thirds()" id = 3rds>3rd</button></li>
+    <li><button class = type onclick = "btn(), sixths()" id = 6ths>6ths</button></li>
+    <br class = line><br class = line>
+    <li>Speed:
+      <br class = line><br class = line>
+      <input id = slide36 type="range" min="30" max="500" value="100" oninput="rangeValue36.innerText = this.value">
+      <p id="rangeValue36">150</p>
+    </li>
+    <br class = line>
+    <li><button onclick = "btn(), scales36()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
+
+    <br class = line> <br class = line> <br class = line>
+    <li>Chromatic Scale:</li>
+    <br class = line> <br class = line> 
+    <li><button class = type onclick = "btn(), chromatic()" id = chromatic>Chromatic Scale</button></li>
+    <br class = line> <br class = line> <br class = line>
+    <li>64 Chords:</li>
+    <br class = line> <br class = line> 
+    <li><button class = type onclick = "btn(), cadential()" id = cadential>Cadential 64</button></li>
+    <li><button class = type onclick = "btn(), passing()" id = passing>Passing 64</button></li>
+    <li><button class = type onclick = "btn(), pedal()" id = pedal>Pedal 64</button></li>
+    <li><button class = type onclick = "btn(), arpeggiated()" id = arpeggiated>Arpeggiated 64</button></li>
+  </ul>
+</div>
+
+<!--The guides to playing the piano technique and to music theory-->
+<div class="guide" id="guide1"> 
+  <div class="overlay"></div>
+  <div id = contents class="stuff" style="visibility: hidden;">
+    <div class="close-btn" onclick="btn(), theory()">&times;
+  </div>
+    <h1>The Ultimate Guide to Piano Techniques</h1>
+    <p>Scales: Learning scales is essential for building a strong foundation in piano playing. They help develop an understanding of key signatures and the layout of the piano. 
+      To play scales effectively, start with a comfortable hand position and practice using proper fingering. Gradually increase your speed to improve agility and accuracy.
+      <br  class = line><br  class = line>
+      Chords: Chords provide the foundation for harmony and are extensively used in the accompaniment of piano pieces through arpeggios, blocked chords, and alternating chords. 
+      To improve at playing chords, make sure your hands are relaxed and practice chord progressions. Learn the basic chord types like major and minor and their inversions. 
+      Triads should be played with the fingering 1-3-5.
+      <br  class = line><br  class = line>
+      Arpeggios: Arpeggios are broken chords that allow pianists to explore the individual notes within a chord. They are commonly used in accompaniments and require precise movements and many stretches. 
+      Good fingerings include 1-2-3 with 5 at the complete top and 2-1-2-3 depending on the arpeggio.
+      <br  class = line><br  class = line>
+      7th Chords and Arpeggios: Seventh chords add an extra note on top of the three-note chord (triad) and add complexity to harmonies. They are often used in jazz. 
+      For 7th arpeggios, use the fingering 1-2-3-4 and at the complete top, use 5. 7th chords can be played with 1-2-3-5.
+      <br  class = line><br  class = line>
+      Blocked and Alternating Arpeggios: Blocked arpeggios are chords played in the format of arpeggios that span multiple octaves. 
+      Alternating arpeggios are played in this pattern: 1st note, 3rd note, 2nd note, 4th note for every ascending octave.
+      <br  class = line><br  class = line>
+      Cadences: Cadences are melodic and harmonic patterns that provide resolution at the end of a coda or section of music. 
+      They are sequences of chords that convey a tonal or emotional resolution. Study the cadence types and make sure you can recognize them in music.
+      <br  class = line><br  class = line>
+      Scales in 3rds and 6ths: Playing scales in 3rds or 6ths helps pianists develop finger independence, coordination, and aural awareness of intervals. 
+      To play scales in 3rds, your left hand should start on the tonic and your right hand should start on the 3rd note of the scale. 
+      For scales in 6ths, your left hand will start on the 3rd note of the scale and your right hand will start on the tonic. Play both hands together and make sure they maintain consistent speed.    
+      </p>
+  </div>
+</div>
+
+<div class="guide" id="guide2"> 
+  <div class="overlay"></div>
+  <div id = contents2 class="stuff" style="visibility: hidden;">
+    <div class="close-btn" onclick="btn(), theory2()">&times;
+  </div>
+    <h1>The Ultimate Guide to Music Theory</h1>
+    <p>Modes: Modes are scales that start on different notes of a scale, not necessarily the tonic. 
+      The modes are Ionian (1), Dorian (2), Phrygian (3), Lydian (4), Mixolydian (5), Aeolian (6), and Locrian (7). To remember them, you can use the phrase: "I Don't Particularly Like Modes A Lot."
+      <br  class = line><br  class = line>
+      Sections of Music: In music, there are different sections with specific characteristics. 
+      An interlude is a brief section, a bridge acts as a transitional passage, a refrain is a repeated section with slight variations, a chorus is the main repeated part, 
+      a verse contains the main lyrics, a coda provides closure at the end of a piece, and a codetta is a shorter ending. The opening of a piece is called the exposition.
+      <br  class = line><br  class = line>
+      Roman Numerals: To determine the Roman numeral of a chord, you find the tonic of the chord and assign the corresponding numeral. 
+      In major, the pattern is: I, ii, iii, IV, V, vi, vii°. In minor, the pattern is: i, ii°, III, iv, v, VI, VII.
+      <br  class = line><br  class = line>
+      Roman Numeral Inversions: A 7 after a Roman numeral indicates a seventh chord. The inversions are represented as 6/5 (first inversion), 4/3 (second inversion), and 4/2 (third inversion). 
+      A 6 after a Roman numeral indicates a first inversion triad, and 64 indicates a second inversion triad. The symbol ° represents a fully diminished chord, and ø represents a half-diminished chord. 
+      A diminished 7th chord is formed by adding a minor third to a diminished chord, and a half-diminished 7th chord is formed by adding a major third to a diminished chord.
+      <br  class = line><br  class = line>
+      Key/Time Signature and Identifying the Key: The time signature consists of two numbers, where the top number indicates the number of beats per measure, and the bottom number represents the 
+      note value that receives one beat. In the key signature, flats are listed from left to right in the order B-E-A-D-G-C-F, while sharps are listed from left to right in the opposite order. 
+      The major key can be found by looking at the second-to-last flat or going up a half step from the rightmost sharp. To determine the relative minor key, go down three half steps from the major key.
+      <br  class = line><br  class = line>
+      Intervals and Positions: Intervals are the distances between two pitches. Major intervals are represented by M, and minor intervals by m. The order of intervals is as follows: 
+      unison, major 2nd, minor 2nd, major 3rd, minor 3rd, perfect 4th, tritone, perfect 5th, minor 6th, major 6th, minor 7th, major 7th, and octave. In the context of a key, specific positions are 
+      assigned to each scale degree: 1 is the tonic, 2 is the supertonic, 3 is the mediant, 4 is the subdominant, 5 is the dominant, 6 is the submediant, and 7 is the leading tone.
+      <br  class = line><br  class = line>
+      Dynamics and Tempo: Dynamics refer to the volume or intensity of the music. The order of dynamics from quietest to loudest is: pp (pianissimo), p (piano), mp (mezzo-piano), mf (mezzo-forte), 
+      f (forte), and ff (fortissimo). Symbols such as sf or > indicate short moments of loudness. A crescendo gradually increases the volume, while a decrescendo (or diminuendo) gradually decreases it. 
+      Tempo refers to the speed of the music. The general order of tempo from slowest to fastest is: grave, largo, adagio, andante, moderato, allegro, vivace, and presto. 
+      Terms like accelerando indicate a gradual increase in speed, while ritardando and rubato signify a gradual slowing down of the music, allowing for more expressive shaping. 
+      Legato and slurs indicate smooth and connected notes, while staccato represents short and detached notes.
+      <br  class = line><br  class = line>
+      Rhythmic Devices: Pickup notes, also known as anacrusis, are notes that occur before the first strong downbeat of a measure. Syncopation is the accentuation of weak beats and off-beat rhythms. 
+      Cross-rhythms are combinations of two or more conflicting rhythms. Hemiola refers to a rhythmic pattern with a ratio of 2:3 in terms of beats.
+      <br  class = line><br  class = line>
+      Melody and Timbre: Melodic contour refers to the shape of a melody, whether it moves predominantly in stepwise motion (conjunct) or leaps (disjunct). 
+      Range refers to the span of pitches an instrument or voice can play, while register indicates the specific position within that range.
+      <br  class = line><br  class = line>
+      Texture: Texture refers to how musical components combine to create the overall sound. Diatonic texture implies a composition is primarily within the key, while chromatic texture incorporates 
+      accidentals and pitches outside of the key. Monophony features a single melodic line, homophony involves multiple voices with one main melody, polyphony incorporates multiple melodies or 
+      imitative melodies, and heterophony resembles homophony but with slight variations or embellishments.
+      <br  class = line><br  class = line>
+      Texture Devices: Alberti bass is a specific pattern (1, 3, 5, 3) commonly used in the bass part. Walking bass outlines the harmony and is frequently found in jazz music. Imitation involves 
+      repeating a musical pattern in different keys or voices. Canon involves layering a melody on top of itself with a time delay. Counter-melody refers to the simultaneous playing of a secondary 
+      melody alongside the main melody. Ostinato represents a repeating pattern throughout a piece. Doubling occurs when two instruments play the same musical line. The downbeat is the first beat of a measure. 
+      A round or a round/figure refers to a canon repeated by multiple voices.
+      <br  class = line><br  class = line>
+      Scale Types: There are various types of scales used in music. The major scale follows the pattern of whole step, whole step, half step, whole step, whole step, whole step, and half step. 
+      The natural minor scale follows the pattern of whole step, half step, whole step, whole step, half step, whole step, and whole step. The harmonic minor scale has the pattern of whole step, 
+      half step, whole step, whole step, half step, one and a half steps, and half step. The melodic minor scale raises the 6th and 7th scale degrees when ascending and lowers them when descending. 
+      The chromatic scale consists of all half steps, while the pentatonic scale consists of five notes with whole steps and skips. Interval refers to the distance between two pitches. 
+      Melodic intervals occur successively, while harmonic intervals are played simultaneously as chords.
+      <br  class = line><br  class = line>
+      Voice Leading and Part-Writing: Melodic contour refers to the overall direction of a melody, including ascending, descending, or staying the same. Common-tone refers to when a melody maintains the 
+      same pitch between two chords. Harmonic counterpoint involves different types of relationships between two voices: contrary motion (moving in opposite directions), oblique motion (one voice stays the 
+      same while the other moves), similar motion (both voices move in the same direction), and parallel motion (both voices move in the same direction while maintaining a consistent interval between them). 
+      In four-part writing (SATB), the soprano, alto, tenor, and bass parts follow a specific pattern of voice leading. Various rules apply, such as avoiding parallel fifths or octaves, not doubling 
+      the leading tone, avoiding doubling the third of a chord, and resolving the chordal seventh appropriately.
+      <br  class = line><br  class = line>
+      6/4 Chords: 6/4 chords have different functions and are classified into passing, pedal, arpeggiated, and cadential. These chords typically serve as weaker predominants leading to dominant chords.
+      <br  class = line><br  class = line>
+      Non-Chord Tones: Non-chord tones are melodic notes that do not belong to the underlying harmony. Examples include passing tones, neighbor tones, appoggiaturas, escape tones, double neighbors, anticipations, 
+      pedal points, suspensions, and retardations. Accented non-chord tones occur on the beat, while unaccented non-chord tones occur on weak parts of the beat (offbeats). Counterpoint refers to the interaction of 
+      two or more melodic lines. Perfect consonances include the unison, perfect fifth, and octave. Imperfect consonances include thirds and sixths. Dissonances include seconds, fourths, sevenths, as well as 
+      diminished and augmented intervals. Metrical durations are equal to the duration of a beat, while submetrical durations are smaller and supermetrical durations are larger.
+      <br  class = line><br  class = line>
+      Motives: Motives are small melodic or rhythmic ideas or fragments. When a motive is repeated exactly, it is called literal repetition. Augmentation and diminution involve increasing or decreasing the 
+      rhythmic values of a motive, respectively. Sequence refers to the restatement of a motive at a different pitch level (transposed up or down). Inversion refers to a motive played in an opposite direction.
+      <br  class = line><br  class = line>
+      Secondary Dominance: Secondary dominance is a harmonic technique that temporarily changes the key and introduces new accidentals. For example, V/ii indicates the dominant chord of the key of ii.
+      <br  class = line><br  class = line>
+      Ornaments: Ornaments are embellishments added to the main melody or harmony to enhance the musical expression. Some common ornaments include trills (rapid alternation between two adjacent notes), 
+      turns (a series of rapid notes around a central pitch), mordents (a quick alternation between a note and its lower or upper neighbor), and grace notes (brief, decorative notes played before a main note).
+      <br  class = line><br  class = line>
+      Form: Musical form refers to the overall structure and organization of a piece of music. Some common forms include binary form (two-part form with two contrasting sections, often labeled as A and B), 
+      ternary form (three-part form with a contrasting middle section, often labeled as ABA), theme and variations (a theme followed by a series of variations based on that theme), and rondo form 
+      (a recurring theme alternating with contrasting sections).
+      <br  class = line><br  class = line>
+      Cadences: Cadences are melodic or harmonic progressions that provide a sense of resolution or closure within a musical phrase or section. Common cadences include the authentic cadence (V-I or V-i), 
+      plagal cadence (IV-I or iv-i), half cadence (ending on the dominant chord), and deceptive cadence (V-vi or V-VI).
+      <br  class = line><br  class = line>
+      Musical Notation: Standard music notation includes various symbols and markings to convey musical information. Some important symbols include the treble clef (indicating the range for higher-pitched 
+      instruments or voices), the bass clef (indicating the range for lower-pitched instruments or voices), time signatures (indicating the number of beats per measure and the type of note that receives one beat), 
+      dynamics markings (indicating the volume or intensity of the music), articulation marks (such as staccato dots or legato lines indicating how the notes should be played), and expression marks (such as 
+      crescendo or diminuendo indicating changes in volume or intensity).
+      <br  class = line><br  class = line>
+      Music Theory Tools: Music theory provides various tools and techniques for analyzing and understanding music. Some important tools include harmonic analysis (examining the chords and harmonic progressions 
+      in a piece), melodic analysis (analyzing the contour, intervals, and phrasing of a melody), formal analysis (identifying and understanding the structure and organization of a piece), and chord progressions 
+      (common sequences of chords that create harmonic movement and tension/resolution).
+      <br  class = line><br  class = line>
+      This is just a brief overview of some important concepts in music theory. The study of music theory is extensive and encompasses many more topics and details.
+      </p>
+  </div>
+</div>
+
+</body>
+</html>
