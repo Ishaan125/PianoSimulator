@@ -3980,8 +3980,11 @@ function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
 
   if (typeNoteC7 == 2 && inversionC7 == 0) {
     document.getElementById('acc5').style.visibility = "visible";
-    document.getElementById('acc5').style.top = 50 + '%';
-    document.getElementById('acc5').style.left = 50 + '%';
+    document.getElementById('acc6').style.visibility = "visible";
+    acc5.style.top = 50 + '%';
+    acc6.style.top = 50 + '%';
+    acc5.style.left = 25 + '%';
+    acc6.style.left = 35 + '%';
   }
 }
 

@@ -383,19 +383,79 @@ ul.nav li {
   box-shadow: 0px 0px 7px #a5a5a5;
 }
 
+.infoKey {
+font-size: 0.5vw;
+}
+.infoType {
+  font-size: 0.5vw;
+}
+.infoSpeed {
+  font-size: 0.5vw;
+}
+.infoKeyC {
+  font-size: 0.5vw;
+}
+.infoTypeC {
+  font-size: 0.5vw;
+}
+.infoInversionC {
+  font-size: 0.5vw;
+}
+.infoKeyA {
+  font-size: 0.5vw;
+}
+.infoTypeA {
+  font-size: 0.5vw;
+}
+.infoSpeedA {
+  font-size: 0.5vw;
+}
+.infoInversionA {
+  font-size: 0.5vw;
+}
+.infoKeyA7 {
+  font-size: 0.5vw;
+}
+.infoTypeA7 {
+  font-size: 0.5vw;
+}
+.infoSpeedA7 {
+  font-size: 0.5vw;
+}
+.infoInversionA7 {
+  font-size: 0.5vw;
+}
+.infoKeyCad {
+  font-size: 0.5vw;
+}
+.infoTypeCad {
+  font-size: 0.5vw;
+}
+.infoCadCad {
+  font-size: 0.5vw;
+}
+.infoKeyC7 {
+  font-size: 0.5vw;
+}
+.infoTypeC7 {
+  font-size: 0.5vw;
+}
+.infoInversionC7 {
+  font-size: 0.5vw;
+}
 /*Animations for side panel buttons*/
 .infoKeyactive {
   transform: translate(-4%) !important;
-  width: 100px;
+  width: 5.2vw;
   background: #ebe8eb;
   height: 3vh;
   position: fixed;
   padding: 3px;
   box-sizing: border-box;
   left: 190px;
-  top: 62%;
+  top: 52%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -408,9 +468,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 133px;
-  top: 67.2%;
+  top: 56.5%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -423,9 +483,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 140px;
-  top: 79.7%;
+  top: 69.7%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -439,9 +499,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 190px;
-  top: 60.7%;
+  top: 50.7%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -454,9 +514,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 133px;
-  top: 65.5%;
+  top: 55.5%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -469,9 +529,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 185px;
-  top: 81.5%;
+  top: 71.5%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -485,9 +545,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 190px;
-  top: 56%;
+  top: 46%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -500,9 +560,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 133px;
-  top: 60.7%;
+  top: 50.7%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -515,9 +575,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 185px;
-  top: 79.5%;
+  top: 69.5%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -531,9 +591,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 188px;
-  top: 53.7%;
+  top: 43.7%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -546,9 +606,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 131px;
-  top: 58.9%;
+  top: 48.9%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -561,9 +621,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 183px;
-  top: 70.3%;
+  top: 60.3%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -576,9 +636,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 136px;
-  top: 83.5%;
+  top: 73.5%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -592,9 +652,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 188px;
-  top: 53.7%;
+  top: 43.7%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -607,9 +667,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 131px;
-  top: 58.5%;
+  top: 48.5%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -622,9 +682,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 181px;
-  top: 68.3%;
+  top: 58.3%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -637,9 +697,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 136px;
-  top: 83.3%;
+  top: 73.3%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -653,9 +713,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 190px;
-  top: 62.8%;
+  top: 49.8%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -668,9 +728,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 132px;
-  top: 66.4%;
+  top: 56.4%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
@@ -683,9 +743,9 @@ ul.nav li {
   padding: 3px;
   box-sizing: border-box;
   left: 171px;
-  top: 75.8%;
+  top: 65.8%;
   transition: all 0.3s linear 0s;
-  font-size: x-small;
+  font-size: 0.5vw;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #a5a5a5;
 }
