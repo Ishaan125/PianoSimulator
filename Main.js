@@ -383,12 +383,12 @@ function donothing() {
 }
 
 // Pedal increases the length of the sound of each note by incrementing j
-function pedal() {
+function pedal1() {
   j++;
 }
 
 function btn() {
-  const audio = new Audio('Audio/Btn.wav');
+  const audio = new Audio('audio/Btn.wav');
   audio.play();
 }
 
@@ -998,10 +998,10 @@ function playOrder(key, length, times) {
   if (findHeight == 38.46 && !oneMid) {
     oneMid = true;
     document.getElementById("ledgemid1").style.visibility = "visible";
-    if (number == 1) {
+    if (number == 1 || number == 16 || number == 17 || number == 18) {
       document.getElementById("ledgemid1").style.right = 69.5 + "%";
     }
-    else if (number == 2) {
+    else if (number == 2 || number == 19 || number == 20 || number == 21) {
       document.getElementById("ledgemid1").style.right = 67.5 + "%";
     }
     else if (number == 3) {
@@ -1043,19 +1043,19 @@ function playOrder(key, length, times) {
     else if (number == 15) {
       document.getElementById("ledgemid1").style.right = 41.5 + "%";
     }
-    else if (number == 16) {
+    else if (number == 22) {
       document.getElementById("ledgemid1").style.right = 39.5 + "%";
     }
-    else if (number == 17) {
+    else if (number == 23) {
       document.getElementById("ledgemid1").style.right = 37.5 + "%";
     }
   }
   else if (findHeight == 38.46 && oneMid) {
     document.getElementById("ledgemid2").style.visibility = "visible";
-    if (number == 1) {
+    if (number == 1 || number == 16 || number == 17 || number == 18) {
       document.getElementById("ledgemid2").style.right = 69.5 + "%";
     }
-    else if (number == 2) {
+    else if (number == 2 || number == 19 || number == 20 || number == 21) {
       document.getElementById("ledgemid2").style.right = 67.5 + "%";
     }
     else if (number == 3) {
@@ -1097,10 +1097,10 @@ function playOrder(key, length, times) {
     else if (number == 15) {
       document.getElementById("ledgemid2").style.right = 41.5 + "%";
     }
-    else if (number == 16) {
+    else if (number == 22) {
       document.getElementById("ledgemid2").style.right = 39.5 + "%";
     }
-    else if (number == 17) {
+    else if (number == 23) {
       document.getElementById("ledgemid2").style.right = 37.5 + "%";
     }
   }
@@ -1288,6 +1288,179 @@ function accidental(natural, note) {
   }
 }
 
+function dominant(note, inv, type) {
+  if (note != '/D' && note != '/G') {
+    document.getElementById('acc5').style.visibility = "visible";
+    document.getElementById('acc6').style.visibility = "visible";
+    if (note == '/Ab') {
+      acc5.style.top = 48.6 + '%';
+      acc6.style.top = 48.6 + '%';
+    }
+    else if (note == '/A') {
+      acc5.style.top = 48.6 + '%';
+      acc6.style.top = 48.6 + '%';
+    }
+    else if (note == '/Bb') {
+      acc5.style.top = 47.98 + '%';
+      acc6.style.top = 47.98 + '%';
+    }
+    else if (note == '/B') {
+      acc5.style.top = 47.98 + '%';
+      acc6.style.top = 47.98 + '%';
+    }
+    else if (note == '/C') {
+      acc5.style.top = 47.36 + '%';
+      acc6.style.top = 47.36 + '%';
+    }
+    else if (note == '/Db') {
+      acc5.style.top = 41.64 + '%';
+      acc6.style.top = 41.64 + '%';
+    }
+    else if (note == '/Eb') {
+      acc5.style.top = 41.02 + '%';
+      acc6.style.top = 41.02 + '%';
+    }
+    else if (note == '/E') {
+      acc5.style.top = 41.02 + '%';
+      acc6.style.top = 41.02 + '%';
+    }
+    else if (note == '/F') {
+      acc5.style.top = 40.42 + '%';
+      acc6.style.top = 40.42 + '%';
+    }
+    else if (note == '/Gb') {
+      acc5.style.top = 40.42 + '%';
+      acc6.style.top = 40.42 + '%';
+    }
+  }
+
+  if (type == 0 && (note != '/D' && note != '/G')) {
+    if (inv == 0) {
+      acc5.style.left = 25.5 + '%';
+      acc6.style.left = 33.5 + '%';
+    }
+    else if (inv == 1) {
+      acc5.style.left = 25.5 + '%';
+      acc6.style.left = 31.5 + '%';
+    }
+    else if (inv == 2) {
+      acc5.style.left = 25.5 + '%';
+      acc6.style.left = 29.5 + '%';
+    }
+    else if (inv == 3) {
+      acc5.style.left = 25.5 + '%';
+      acc6.style.left = 27.5 + '%';
+    }
+  }
+
+  else if (type == 1 && (note != '/D' && note != '/G')) {
+    document.getElementById('acc7').style.visibility = "visible";
+    document.getElementById('acc8').style.visibility = "visible";
+
+    if (note == '/Ab') {
+      acc7.style.top = 39.3 + '%';
+      acc8.style.top = 39.3 + '%';
+    }
+    else if (note == '/A') {
+      acc7.style.top = 39.3 + '%';
+      acc7.style.top = 39.3 + '%';
+    }
+    else if (note == '/Bb') {
+      acc7.style.top = 38.68 + '%';
+      acc8.style.top = 38.68 + '%';
+    }
+    else if (note == '/B') {
+      acc7.style.top = 38.68 + '%';
+      acc8.style.top = 38.68 + '%';
+    }
+    else if (note == '/C') {
+      acc7.style.top = 38.36 + '%';
+      acc8.style.top = 38.36 + '%';
+    }
+    else if (note == '/Db') {
+      acc7.style.top = 37.64 + '%';
+      acc8.style.top = 37.64 + '%';
+    }
+    else if (note == '/Eb') {
+      acc7.style.top = 37.02 + '%';
+      acc8.style.top = 37.02 + '%';
+    }
+    else if (note == '/E') {
+      acc7.style.top = 37.02 + '%';
+      acc8.style.top = 37.02 + '%';
+    }
+    else if (note == '/F') {
+      acc7.style.top = 36.32 + '%';
+      acc8.style.top = 36.32 + '%';
+    }
+    else if (note == '/Gb') {
+      acc7.style.top = 36.32 + '%';
+      acc8.style.top = 36.32 + '%';
+    }
+
+    if (inv == 3) {
+      document.getElementById('acc9').style.visibility = "visible";
+      if (note == '/Ab') {
+        acc9.style.top = 35 + '%';
+      }
+      else if (note == '/A') {
+        acc9.style.top = 35 + '%';
+      }
+      else if (note == '/Bb') {
+        acc9.style.top = 34.38 + '%';
+      }
+      else if (note == '/B') {
+        acc9.style.top = 34.38 + '%';
+      }
+      else if (note == '/C') {
+        acc9.style.top = 33.76 + '%';
+      }
+      else if (note == '/Db') {
+        acc9.style.top = 33.76 + '%';
+      }
+      else if (note == '/Eb') {
+        acc9.style.top = 33.14 + '%';
+      }
+      else if (note == '/E') {
+        acc9.style.top = 33.14 + '%';
+      }
+      else if (note == '/F') {
+        acc9.style.top = 32.52 + '%';
+      }
+      else if (note == '/Gb') {
+        acc9.style.top = 32.52 + '%';
+      }
+    }
+
+    if (inv == 0) {
+      acc5.style.left = 31.5 + '%';
+      acc7.style.left = 39.5 + '%';
+      acc8.style.left = 43.5 + '%';
+      acc6.style.left = 51.5 + '%';
+    }
+    else if (inv == 1) {
+      acc5.style.left = 29.5 + '%';
+      acc7.style.left = 37.5 + '%';
+      acc8.style.left = 45.5 + '%';
+      acc6.style.left = 53.5 + '%';
+    }
+    else if (inv == 2) {
+      acc5.style.left = 27.5 + '%';
+      acc7.style.left = 35.5 + '%';
+      acc8.style.left = 47.5 + '%';
+      acc6.style.left = 55.5 + '%';
+    }
+    else if (inv == 3) {
+      document.getElementById('acc9').style.visibility = "visible";
+      acc5.style.left = 25.5 + '%';
+      acc7.style.left = 33.5 + '%';
+      acc9.style.left = 41.5 + '%';
+      acc8.style.left = 49.5 + '%';
+      acc6.style.left = 57.5 + '%';
+    }
+  }
+}
+
 var Esh = false;
 var Bsh = false;
 var Csh = false;
@@ -1306,6 +1479,12 @@ function playSequence(keyNote, typeNote, lengthNote) {
   document.getElementById('acc2').textContent = '';
   document.getElementById('acc3').textContent = '';
   document.getElementById('acc4').textContent = '';
+  document.getElementById('acc5').textContent = '';
+  document.getElementById('acc6').textContent = '';
+  document.getElementById('acc7').textContent = '';
+  document.getElementById('acc8').textContent = '';
+  document.getElementById('ledgemid1').style.visibility = 'hidden';
+  document.getElementById('ledgemid2').style.visibility = 'hidden';
   numAccident = 0;
   word(lengthNote);
   // Gets the length to play each note for
@@ -2711,6 +2890,11 @@ function reset() {
   document.getElementById('n21').style.visibility="hidden";
   document.getElementById('n22').style.visibility="hidden";
   document.getElementById('n23').style.visibility="hidden";
+  document.getElementById('acc5').style.visibility="hidden";
+  document.getElementById('acc6').style.visibility="hidden";
+  document.getElementById('acc7').style.visibility="hidden";
+  document.getElementById('acc8').style.visibility="hidden";
+  document.getElementById('acc9').style.visibility="hidden";
 }
 
 // Cadences
@@ -3385,6 +3569,7 @@ function nextChord7() {
 
 function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
   reset();
+  resetLedges();
   if (typeNoteC == 1) {
     typeHeight = 1;
   }
@@ -3736,7 +3921,8 @@ function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
     plays('#A4', 1000, 0.1); plays('#Db4', 1000, 0.11); plays('#F3', 1000, 0.111); plays('#G3', 1000, 0.1111);plays('#A4', 1000, 5.6); plays('#Db4', 1000, 6.8); plays('#F3', 1000, 3.2); plays('#G3', 1000, 4.4);keySig(3, false)}
   else if (keyNoteC7 == '/Bb' && typeNoteC7 == 3 && inversionC7 == 2) {
     plays('#Bb4', 1000, 0.1); plays('#D4', 1000, 0.11); plays('#Gb3', 1000, 0.111); plays('#Ab3', 1000, 0.1111);plays('#Bb4', 1000, 5.6); plays('#D4', 1000, 6.8); plays('#Gb3', 1000, 3.2); plays('#Ab3', 1000, 4.4);keySig(2, true)}
-  else if (keyNoteC7 == '/B' && typeNoteC7 == 3 && inversionC7 == 2) {
+  else if (keyNoteC7 == '/B' 
+&& typeNoteC7 == 3 && inversionC7 == 2) {
     plays('#B4', 1000, 0.1); plays('#Eb4', 1000, 0.11); plays('#G3', 1000, 0.111); plays('#A4', 1000, 0.1111);plays('#B4', 1000, 5.6); plays('#Eb4', 1000, 6.8); plays('#G3', 1000, 3.2); plays('#A4', 1000, 4.4);keySig(5, false)}
   else if (keyNoteC7 == '/C' && typeNoteC7 == 3 && inversionC7 == 2) {
     plays('#C4', 1000, 0.1); plays('#E4', 1000, 0.11); plays('#Ab3', 1000, 0.111); plays('#Bb4', 1000, 0.1111);plays('#C4', 1000, 5.6); plays('#E4', 1000, 6.8); plays('#Ab3', 1000, 3.2); plays('#Bb4', 1000, 4.4);}
@@ -3978,13 +4164,8 @@ function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
     window.alert("Please enter all fields");
   }
 
-  if (typeNoteC7 == 2 && inversionC7 == 0) {
-    document.getElementById('acc5').style.visibility = "visible";
-    document.getElementById('acc6').style.visibility = "visible";
-    acc5.style.top = 50 + '%';
-    acc6.style.top = 50 + '%';
-    acc5.style.left = 25 + '%';
-    acc6.style.left = 35 + '%';
+  if (typeNoteC7 == 2) {
+    dominant(keyNoteC7, inversionC7, 0);
   }
 }
 
@@ -4048,6 +4229,7 @@ function thirdA7() {
 
 function nextArpeggio7() {
   reset();
+  resetLedges();
   var lengthA7 = document.getElementById('rangeValuea7').innerText;
   word(lengthA7);
   var length = 60/lengthA7 * 1000;
@@ -4354,7 +4536,10 @@ function nextArpeggio7() {
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields")
   }
-  resetLedges();
+
+  if (typeNoteA7 == 2) {
+    dominant(keyNoteA7, inversionA7, 1);
+  }
 }
 
 // Other button

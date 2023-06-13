@@ -1106,7 +1106,18 @@ font-size: 0.5vw;
 #acc4 {
   right: 52.5%;
 }
-
+#acc5 {
+  right: 54.5%;
+}
+#acc6 {
+  right: 52.5%;
+}
+.accidentb {
+  position: absolute;
+  width: 5.975vw;
+  height: 3.36vw;
+  z-index: 4;
+}
 /*The two guides at the top of the screen*/
 /*Opens up a popup with all of the info and a close button*/
 .guide .overlay {
