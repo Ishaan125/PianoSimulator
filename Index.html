@@ -203,6 +203,8 @@
   <audio id="B8" src="notes/7-b.wav"></audio>
   <audio id="C8" src="notes/8-c.wav"></audio>
 
+  <audio id="btn" src="audio/Btn.wav"></audio>
+
   <!--  
 <div class = "box">
   <div id = "q1" class = "shape"></div>
@@ -214,35 +216,37 @@
  <!--All of the buttons that are in the side panel-->
 <div class = "menu">
   <ul>
-    <li><button id = scales class="technique" onclick = "btn()"><i class="fa fa-music"></i>Scales</button></li>
+    <li class = "title">Techniques</li>
     <br class = line>
-    <li><button id = chords class="technique" onclick = "btn()"><i class="fa fa-bars"></i>Chords</button></li>
+    <li><button id = scales class="technique" onclick = "btn()"><i class="fa fa-music" style="visibility: hidden;"></i>Scales</button></li>
     <br class = line>
-    <li><button id = arpeggios class="technique" onclick = "btn()"><i class="fa fa-spinner"></i>Arpeggios</button></li>
+    <li><button id = chords class="technique" onclick = "btn()"><i class="fa fa-bars" style="visibility: hidden;"></i>Chords</button></li>
     <br class = line>
-    <li><button id = 7chords class="technique" onclick = "btn()"><i class="fa fa-bars"></i>7th Chords</button></li>
+    <li><button id = arpeggios class="technique" onclick = "btn()"><i class="fa fa-spinner" style="visibility: hidden;"></i>Arpeggios</button></li>
     <br class = line>
-    <li><button id = arpeggios7 class="technique" onclick = "btn()"><i class="fa fa-spinner"></i>7th Arpeggios</button></li>
+    <li><button id = chords7 class="technique" onclick = "btn()"><i class="fa fa-bars" style="visibility: hidden;"></i>7th Chords</button></li>
     <br class = line>
-    <li><button id = keyFind class="technique" onclick = "btn()"><i class="fa fa-search"></i>Key Finder</button></li>
+    <li><button id = arpeggios7 class="technique" onclick = "btn()"><i class="fa fa-spinner" style="visibility: hidden;"></i>7th Arpeggios</button></li>
     <br class = line>
-    <li><button id = cadences class="technique" onclick = "btn()"><i class="fa fa-spotify"></i>Cadences</button></li>
+    <li><button id = keyFind class="technique" onclick = "btn()"><i class="fa fa-search" style="visibility: hidden;"></i>Key Finder</button></li>
     <br class = line>
-    <li><button id = other class="technique" onclick = "btn()"><i class="fa fa-plus-circle"></i>Other</button></li>
+    <li><button id = cadences class="technique" onclick = "btn()"><i class="fa fa-spotify" style="visibility: hidden;"></i>Cadences</button></li>
+    <br class = line>
+    <li><button id = other class="technique" onclick = "btn()"><i class="fa fa-plus-circle" style="visibility: hidden;"></i>Other</button></li>
   </ul>
 </div>
 
 <!--The black buttons at the top middle of the screen-->
 <div class = "buttons">
   <button class = extra onclick = "btn(), showLetters()"> Show Keybinds </button>
-  <button class = extra onclick = "btn(), m()"> Metronome </button>
+  <!--<button class = extra onclick = "btn(), m()"> Metronome </button>-->
   <button class = extra onclick = "btn(), pedal1()"> Pedal </button>
   <button class = extra id = theory onclick = "btn(), theory()">Piano Guide</button>
   <button class = extra id = theory2 onclick = "btn(), theory2()">Music Theory Guide</button>
 </div>
 
 <!--Dark mode button at the top right-->
-<button id = dark onclick = "btn(), dark()">Dark Mode</button>
+<button id = dark onclick = "btn(), dark()" style="visibility: hidden;">Dark Mode</button>
 
 <!--  
 <div>
@@ -303,7 +307,7 @@ alt l, alt o
     </li>
     <br class = line>
     <!--Done button to play what you have selected-->
-    <li><button onclick = "btn(), next(), notation()" class = Done><i class="fa fa-check"></i></button></li>
+    <li><button onclick = "btn(), notation(), next()" class = Done><i class="fa fa-check"></i></button></li>
     <!--Close button to close the button in the side panel and reload the page-->
     <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
   </ul>
@@ -538,6 +542,9 @@ alt l, alt o
 <div class = "infoKeyA">    
 </div>
  -->
+
+<div id = box style="visibility: hidden;"></div>
+<div id = box2 style="visibility: hidden;"></div>
 
  <!--Stores all of the sharps, flats, and naturals that appear on the sheet music as accidentals or in the key signature. 
 Also stores the grand staff that the music is printed on-->

@@ -358,7 +358,7 @@ function findKey(keyFind, octaveFind) {
   else if(keyFind == '/Ab' && octaveFind == 7) { play('#Ab7', 1000); }
   // Send a message if the input is invalid
   else {
-    window.alert("This key doesn't exist!")
+    window.alert("This key doesn't exist!");
   }
 }
 
@@ -388,7 +388,7 @@ function pedal1() {
 }
 
 function btn() {
-  const audio = new Audio('audio/Btn.wav');
+  const audio = document.getElementById('btn');
   audio.play();
 }
 
@@ -397,35 +397,13 @@ function btn() {
 var a = 0;
 function dark() {
   a++;
-  if (a % 3 == 1) {
-    document.body.style.backgroundColor = 'black';
-    document.getElementById('one').style.color = 'white';
-    document.getElementById('four').style.color = 'white';
-    document.getElementById('five').style.color = 'white';
-    document.getElementById('six').style.color = 'white';
-    document.getElementById('Speed').style.color = 'white';
-    document.getElementById('Quart').style.color = 'white';
-    document.getElementById('dark').innerHTML = "Kinda Dark Mode";
-  }
-  else if (a % 3 == 2) {
+  if (a % 2 == 0) {
     document.body.style.backgroundColor = '#313131';
-    document.getElementById('one').style.color = 'white';
-    document.getElementById('four').style.color = 'white';
-    document.getElementById('five').style.color = 'white';
-    document.getElementById('six').style.color = 'white';
-    document.getElementById('Speed').style.color = 'white';
-    document.getElementById('Quart').style.color = 'white';
-    document.getElementById("dark").innerHTML = "Light Mode";
-  }
-  else {
-    document.body.style.backgroundColor = 'white';
-    document.getElementById('one').style.color = 'black';
-    document.getElementById('four').style.color = 'black';
-    document.getElementById('five').style.color = 'black';
-    document.getElementById('six').style.color = 'black';
-    document.getElementById('Speed').style.color = 'black';
-    document.getElementById('Quart').style.color = 'black';
     document.getElementById("dark").innerHTML = "Dark Mode";
+  }
+  else if (a % 2 == 1) {
+    document.body.style.backgroundColor = 'black';
+    document.getElementById('dark').innerHTML = "Kinda Dark Mode";
   }
 }
 
@@ -445,7 +423,7 @@ document.getElementById("arpeggios").addEventListener("click", function(){
 document.getElementById("cadences").addEventListener("click", function(){
   document.querySelector(".sideCadence").classList.toggle("sidecadenceactive");
 })
-document.getElementById("7chords").addEventListener("click", function(){
+document.getElementById("chords7").addEventListener("click", function(){
   document.querySelector(".sideChord7").classList.toggle("sidechord7active");
 })
 document.getElementById("arpeggios7").addEventListener("click", function(){
@@ -547,7 +525,6 @@ function play(key, length) {
 function playOrder(key, length, times) {
   // Plays the note
   play(key, length);
-
   // Sets the x-axis position of all of the notes
   if (times == 3.2 || times == 2.2) {
     number = 2;
@@ -797,7 +774,7 @@ function playOrder(key, length, times) {
   note(findHeight, number);
 
   // Positions of all of the ledger lines
-  if (findHeight <= 31.02 && !oneA) {
+  if (findHeight <= 31.02 && !oneA && typeHeight != 10) {
     oneA = true;
     document.getElementById("ledge1A").style.visibility = "visible";
     if (number == 6) {
@@ -819,7 +796,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledge1A").style.right = 49.5 + "%";
     }
   }
-  else if (findHeight <= 31.02 && !twoA) {
+  else if (findHeight <= 31.02 && !twoA && typeHeight != 10) {
     twoA = true;
     document.getElementById("ledge2A").style.visibility = "visible";
     if (number == 6) {
@@ -841,7 +818,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledge2A").style.right = 49.5 + "%";
     }
   }
-  else if (findHeight <= 31.02 && !threeA) {
+  else if (findHeight <= 31.02 && !threeA && typeHeight != 10) {
     threeA = true;
     document.getElementById("ledge3A").style.visibility = "visible";
     if (number == 6) {
@@ -863,7 +840,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledge3A").style.right = 49.5 + "%";
     }
   }
-  else if (findHeight <= 31.02 && !fourA) {
+  else if (findHeight <= 31.02 && !fourA && typeHeight != 10) {
     fourA = true;
     document.getElementById("ledge4A").style.visibility = "visible";
     if (number == 6) {
@@ -885,7 +862,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledge4A").style.right = 49.5 + "%";
     }
   }
-  else if (findHeight <= 31.02) {
+  else if (findHeight <= 31.02 && typeHeight != 10) {
     document.getElementById("ledge5A").style.visibility = "visible";
     if (number == 6) {
       document.getElementById("ledge5A").style.right = 59.5 + "%";
@@ -907,7 +884,7 @@ function playOrder(key, length, times) {
     }
   }
 
-  if (findHeight <= 29.78 && !oneC) {
+  if (findHeight <= 29.78 && !oneC && typeHeight != 10) {
     oneC = true;
     document.getElementById("ledge1C").style.visibility = "visible";
     if (number == 6) {
@@ -929,7 +906,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledge1C").style.right = 49.5 + "%";
     }
   }
-  else if (findHeight <= 29.78 && !twoC) {
+  else if (findHeight <= 29.78 && !twoC && typeHeight != 10) {
     twoC = true;
     document.getElementById("ledge2C").style.visibility = "visible";
     if (number == 6) {
@@ -951,7 +928,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledge2C").style.right = 49.5 + "%";
     }
   }
-  else if (findHeight <= 29.78) {
+  else if (findHeight <= 29.78 && typeHeight != 10) {
     document.getElementById("ledge3C").style.visibility = "visible";
     if (number == 6) {
       document.getElementById("ledge3C").style.right = 59.5 + "%";
@@ -973,7 +950,7 @@ function playOrder(key, length, times) {
     }
   }
 
-  if (findHeight <= 28.54) {
+  if (findHeight <= 28.54 && typeHeight != 10) {
     document.getElementById("ledgeE").style.visibility = "visible";
     if (number == 6) {
       document.getElementById("ledgeE").style.right = 59.5 + "%";
@@ -995,7 +972,7 @@ function playOrder(key, length, times) {
     }
   }
 
-  if (findHeight == 38.46 && !oneMid) {
+  if (findHeight == 38.46 && !oneMid && typeHeight != 10) {
     oneMid = true;
     document.getElementById("ledgemid1").style.visibility = "visible";
     if (number == 1 || number == 16 || number == 17 || number == 18) {
@@ -1050,7 +1027,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledgemid1").style.right = 37.5 + "%";
     }
   }
-  else if (findHeight == 38.46 && oneMid) {
+  else if (findHeight == 38.46 && oneMid && typeHeight != 10) {
     document.getElementById("ledgemid2").style.visibility = "visible";
     if (number == 1 || number == 16 || number == 17 || number == 18) {
       document.getElementById("ledgemid2").style.right = 69.5 + "%";
@@ -1104,6 +1081,7 @@ function playOrder(key, length, times) {
       document.getElementById("ledgemid2").style.right = 37.5 + "%";
     }
   }
+
 }
 //https://www.sitepoint.com/delay-sleep-pause-wait/
 
@@ -1502,6 +1480,18 @@ function playSequence(keyNote, typeNote, lengthNote) {
     typeHeight = 2;
   }
   // Major
+  if (typeNote == 2){
+    document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
+    document.getElementById('Speed').textContent = '';
+    resetLedges();
+    reset();
+    document.getElementById("acc1").style.visibility = "hidden";
+    document.getElementById("acc2").style.visibility = "hidden";
+    document.getElementById("acc3").style.visibility = "hidden";
+    document.getElementById("acc4").style.visibility = "hidden";
+  }
   if (keyNote == '/C' && typeNote == 0) {
     plays('#C4', length, 1);plays('#D4', length, 2);plays('#E4', length, 3);plays('#F4', length, 4);plays('#G4', length, 5);
     plays('#A5', length, 6);plays('#B5', length, 7);plays('#C5', length, 8);plays('#B5', length, 9);plays('#A5', length, 10);
@@ -1599,56 +1589,58 @@ function playSequence(keyNote, typeNote, lengthNote) {
     plays('#Eb5', length, 6);plays('#Gb5', length, 7);plays('#G5', length, 8);plays('#Gb5', length, 9);plays('#Eb5', length, 10);
     plays('#D5', length, 11);plays('#C5', length, 12);plays('#Bb5', length, 13);plays('#A5', length, 14);plays('#G4', length, 15); keySig(2, true)}
   else if (keyNote == '/A' && typeNote == 2) {
-    accidental(3, 'A'); plays('#A4', length, 1);plays('#B4', length, 2);plays('#C4', length, 3);plays('#D4', length, 4);plays('#E4', length, 5);
-    plays('#Gb4', length, 6);plays('#Ab4', length, 7);plays('#A5', length, 8);plays('#G4', length, 9);plays('#F4', length, 10);
-    plays('#E4', length, 11);plays('#D4', length, 12);plays('#C4', length, 13);plays('#B4', length, 14);plays('#A4', length, 15); }
+    accidental(3, 'A'); plays2('#A4', length, 1);plays2('#B4', length, 2);plays2('#C4', length, 3);plays2('#D4', length, 4);plays2('#E4', length, 5);
+    plays2('#Gb4', length, 6);plays2('#Ab4', length, 7);plays2('#A5', length, 8);plays2('#G4', length, 9);plays2('#F4', length, 10);
+    plays2('#E4', length, 11);plays2('#D4', length, 12);plays2('#C4', length, 13);plays2('#B4', length, 14);plays2('#A4', length, 15); }
   else if (keyNote == '/Bb' && typeNote == 2) {
-    accidental(3, 'Bb'); plays('#Bb4', length, 1);plays('#C4', length, 2);plays('#Db4', length, 3);plays('#Eb4', length, 4);plays('#F4', length, 5);
-    plays('#G4', length, 6);plays('#A5', length, 7);plays('#Bb5', length, 8);plays('#Ab4', length, 9);plays('#Gb4', length, 10);
-    plays('#F4', length, 11);plays('#Eb4', length, 12);plays('#Db4', length, 13);plays('#C4', length, 14);plays('#Bb4', length, 15); keySig(7, true)}
+    accidental(3, 'Bb'); plays2('#Bb4', length, 1);plays2('#C4', length, 2);plays2('#Db4', length, 3);plays2('#Eb4', length, 4);plays2('#F4', length, 5);
+    plays2('#G4', length, 6);plays2('#A5', length, 7);plays2('#Bb5', length, 8);plays2('#Ab4', length, 9);plays2('#Gb4', length, 10);
+    plays2('#F4', length, 11);plays2('#Eb4', length, 12);plays2('#Db4', length, 13);plays2('#C4', length, 14);plays2('#Bb4', length, 15); }
   else if (keyNote == '/B' && typeNote == 2) {
-    accidental(3, 'B'); plays('#B4', length, 1);plays('#Db4', length, 2);plays('#D4', length, 3);plays('#E4', length, 4);plays('#Gb4', length, 5);
-    plays('#Ab4', length, 6);plays('#Bb5', length, 7);plays('#B5', length, 8);plays('#A5', length, 9);plays('#G4', length, 10);
-    plays('#Gb4', length, 11);plays('#E4', length, 12);plays('#D4', length, 13);plays('#Db4', length, 14);plays('#B4', length, 15); keySig(5, true)}
+    accidental(3, 'B'); plays2('#B4', length, 1);plays2('#Db4', length, 2);plays2('#D4', length, 3);plays2('#E4', length, 4);plays2('#Gb4', length, 5);
+    plays2('#Ab4', length, 6);plays2('#Bb5', length, 7);plays2('#B5', length, 8);plays2('#A5', length, 9);plays2('#G4', length, 10);
+    plays2('#Gb4', length, 11);plays2('#E4', length, 12);plays2('#D4', length, 13);plays2('#Db4', length, 14);plays2('#B4', length, 15); }
   else if (keyNote == '/C' && typeNote == 2) {
-    accidental(3, 'C'); plays('#C4', length, 1);plays('#D4', length, 2);plays('#Eb4', length, 3);plays('#F4', length, 4);plays('#G4', length, 5);
-    plays('#A5', length, 6);plays('#B5', length, 7);plays('#C5', length, 8);plays('#Bb5', length, 9);plays('#Ab4', length, 10);
-    plays('#G4', length, 11);plays('#F4', length, 12);plays('#Eb4', length, 13);plays('#D4', length, 14);plays('#C4', length, 15); keySig(2, false)}
+    accidental(3, 'C'); plays2('#C4', length, 1);plays2('#D4', length, 2);plays2('#Eb4', length, 3);plays2('#F4', length, 4);plays2('#G4', length, 5);
+    plays2('#A5', length, 6);plays2('#B5', length, 7);plays2('#C5', length, 8);plays2('#Bb5', length, 9);plays2('#Ab4', length, 10);
+    plays2('#G4', length, 11);plays2('#F4', length, 12);plays2('#Eb4', length, 13);plays2('#D4', length, 14);plays2('#C4', length, 15); }
   else if (keyNote == '/Db' && typeNote == 2) {
-    accidental(3, 'Db'); plays('#Db4', length, 1);plays('#Eb4', length, 2);plays('#E4', length, 3);plays('#Gb4', length, 4);plays('#Ab4', length, 5);
-    plays('#Bb5', length, 6);plays('#C5', length, 7);plays('#Db5', length, 8);plays('#B5', length, 9);plays('#A5', length, 10);
-    plays('#Ab4', length, 11);plays('#Gb4', length, 12);plays('#E4', length, 13);plays('#Eb4', length, 14);plays('#Db4', length, 15); keySig(3, true)}
+    accidental(3, 'Db'); plays2('#Db4', length, 1);plays2('#Eb4', length, 2);plays2('#E4', length, 3);plays2('#Gb4', length, 4);plays2('#Ab4', length, 5);
+    plays2('#Bb5', length, 6);plays2('#C5', length, 7);plays2('#Db5', length, 8);plays2('#B5', length, 9);plays2('#A5', length, 10);
+    plays2('#Ab4', length, 11);plays2('#Gb4', length, 12);plays2('#E4', length, 13);plays2('#Eb4', length, 14);plays2('#Db4', length, 15); }
   else if (keyNote == '/D' && typeNote == 2) {
-    accidental(3, 'D'); plays('#D4', length, 1);plays('#E4', length, 2);plays('#F4', length, 3);plays('#G4', length, 4);plays('#A5', length, 5);
-    plays('#B5', length, 6);plays('#Db5', length, 7);plays('#D5', length, 8);plays('#C5', length, 9);plays('#Bb5', length, 10);
-    plays('#A5', length, 11);plays('#G4', length, 12);plays('#F4', length, 13);plays('#E4', length, 14);plays('#D4', length, 15); keySig(4, false)}
+    accidental(3, 'D'); plays2('#D4', length, 1);plays2('#E4', length, 2);plays2('#F4', length, 3);plays2('#G4', length, 4);plays2('#A5', length, 5);
+    plays2('#B5', length, 6);plays2('#Db5', length, 7);plays2('#D5', length, 8);plays2('#C5', length, 9);plays2('#Bb5', length, 10);
+    plays2('#A5', length, 11);plays2('#G4', length, 12);plays2('#F4', length, 13);plays2('#E4', length, 14);plays2('#D4', length, 15); }
   else if (keyNote == '/Eb' && typeNote == 2) {
-    accidental(3, 'Eb'); plays('#Eb4', length, 1);plays('#F4', length, 2);plays('#Gb4', length, 3);plays('#Ab4', length, 4);plays('#Bb5', length, 5);
-    plays('#C5', length, 6);plays('#D5', length, 7);plays('#Eb5', length, 8);plays('#Db5', length, 9);plays('#B5', length, 10);
-    plays('#Bb5', length, 11);plays('#Ab4', length, 12);plays('#Gb4', length, 13);plays('#F4', length, 14);plays('#Eb4', length, 15); keySig(1, true)}
+    accidental(3, 'Eb'); plays2('#Eb4', length, 1);plays2('#F4', length, 2);plays2('#Gb4', length, 3);plays2('#Ab4', length, 4);plays2('#Bb5', length, 5);
+    plays2('#C5', length, 6);plays2('#D5', length, 7);plays2('#Eb5', length, 8);plays2('#Db5', length, 9);plays2('#B5', length, 10);
+    plays2('#Bb5', length, 11);plays2('#Ab4', length, 12);plays2('#Gb4', length, 13);plays2('#F4', length, 14);plays2('#Eb4', length, 15); }
   else if (keyNote == '/E' && typeNote == 2) {
-    accidental(3, 'E'); plays('#E4', length, 1);plays('#Gb4', length, 2);plays('#G4', length, 3);plays('#A5', length, 4);plays('#B5', length, 5);
-    plays('#Db5', length, 6);plays('#Eb5', length, 7);plays('#E5', length, 8);plays('#D5', length, 9);plays('#C5', length, 10);
-    plays('#B5', length, 11);plays('#A5', length, 12);plays('#G4', length, 13);plays('#Gb4', length, 14);plays('#E4', length, 15); keySig(6, true)}
+    accidental(3, 'E'); plays2('#E4', length, 1);plays2('#Gb4', length, 2);plays2('#G4', length, 3);plays2('#A5', length, 4);plays2('#B5', length, 5);
+    plays2('#Db5', length, 6);plays2('#Eb5', length, 7);plays2('#E5', length, 8);plays2('#D5', length, 9);plays2('#C5', length, 10);
+    plays2('#B5', length, 11);plays2('#A5', length, 12);plays2('#G4', length, 13);plays2('#Gb4', length, 14);plays2('#E4', length, 15); }
   else if (keyNote == '/F' && typeNote == 2) {
-    accidental(3, 'F'); plays('#F4', length, 1);plays('#G4', length, 2);plays('#Ab4', length, 3);plays('#Bb5', length, 4);plays('#C5', length, 5);
-    plays('#D5', length, 6);plays('#E5', length, 7);plays('#F5', length, 8);plays('#Eb5', length, 9);plays('#Db5', length, 10);
-    plays('#C5', length, 11);plays('#Bb5', length, 12);plays('#Ab4', length, 13);plays('#G4', length, 14);plays('#F4', length, 15); keySig(1, false)}
+    accidental(3, 'F'); plays2('#F4', length, 1);plays2('#G4', length, 2);plays2('#Ab4', length, 3);plays2('#Bb5', length, 4);plays2('#C5', length, 5);
+    plays2('#D5', length, 6);plays2('#E5', length, 7);plays2('#F5', length, 8);plays2('#Eb5', length, 9);plays2('#Db5', length, 10);
+    plays2('#C5', length, 11);plays2('#Bb5', length, 12);plays2('#Ab4', length, 13);plays2('#G4', length, 14);plays2('#F4', length, 15); }
   else if (keyNote == '/Gb' && typeNote == 2) {
-    accidental(3, 'Gb'); plays('#Gb4', length, 1);plays('#Ab4', length, 2);plays('#A5', length, 3);plays('#B5', length, 4);plays('#Db5', length, 5);
-    plays('#Eb5', length, 6);plays('#F5', length, 7);plays('#Gb5', length, 8);plays('#E5', length, 9);plays('#D5', length, 10);
-    plays('#Db5', length, 11);plays('#B5', length, 12);plays('#A5', length, 13);plays('#Ab4', length, 14);plays('#Gb4', length, 15); keySig(4, true)}
+    accidental(3, 'Gb'); plays2('#Gb4', length, 1);plays2('#Ab4', length, 2);plays2('#A5', length, 3);plays2('#B5', length, 4);plays2('#Db5', length, 5);
+    plays2('#Eb5', length, 6);plays2('#F5', length, 7);plays2('#Gb5', length, 8);plays2('#E5', length, 9);plays2('#D5', length, 10);
+    plays2('#Db5', length, 11);plays2('#B5', length, 12);plays2('#A5', length, 13);plays2('#Ab4', length, 14);plays2('#Gb4', length, 15); }
   else if (keyNote == '/G' && typeNote == 2) {
-    accidental(3, 'G'); plays('#G4', length, 1);plays('#A5', length, 2);plays('#Bb5', length, 3);plays('#C5', length, 4);plays('#D5', length, 5);
-    plays('#E5', length, 6);plays('#Gb5', length, 7);plays('#G5', length, 8);plays('#F5', length, 9);plays('#Eb5', length, 10);
-    plays('#D5', length, 11);plays('#C5', length, 12);plays('#Bb5', length, 13);plays('#A5', length, 14);plays('#G4', length, 15); keySig(3, false)}
+    accidental(3, 'G'); plays2('#G4', length, 1);plays2('#A5', length, 2);plays2('#Bb5', length, 3);plays2('#C5', length, 4);plays2('#D5', length, 5);
+    plays2('#E5', length, 6);plays2('#Gb5', length, 7);plays2('#G5', length, 8);plays2('#F5', length, 9);plays2('#Eb5', length, 10);
+    plays2('#D5', length, 11);plays2('#C5', length, 12);plays2('#Bb5', length, 13);plays2('#A5', length, 14);plays2('#G4', length, 15); }
   else if (keyNote == '/Ab' && typeNote == 2) {
-    accidental(3, 'Ab'); plays('#Ab3', length, 1);plays('#Bb4', length, 2);plays('#B4', length, 3);plays('#Db4', length, 4);plays('#Eb4', length, 5);
-    plays('#F4', length, 6);plays('#G4', length, 7);plays('#Ab4', length, 8);plays('#Gb4', length, 9);plays('#E4', length, 10);
-    plays('#Eb4', length, 11);plays('#Db4', length, 12);plays('#B4', length, 13);plays('#Bb4', length, 14);plays('#Ab3', length, 15); keySig(2, true)}
+    accidental(3, 'Ab'); plays2('#Ab3', length, 1);plays2('#Bb4', length, 2);plays2('#B4', length, 3);plays2('#Db4', length, 4);plays2('#Eb4', length, 5);
+    plays2('#F4', length, 6);plays2('#G4', length, 7);plays2('#Ab4', length, 8);plays2('#Gb4', length, 9);plays2('#E4', length, 10);
+    plays2('#Eb4', length, 11);plays2('#Db4', length, 12);plays2('#B4', length, 13);plays2('#Bb4', length, 14);plays2('#Ab3', length, 15); }
   // If not all of the conditions are met
   else {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields");
   }
@@ -1892,7 +1884,7 @@ var zCad = 0;
 function infoCadCad() {
   document.querySelector(".infoCadCad").classList.toggle("infoCadCadactive");
   if (zCad % 2 == 0) {
-    document.querySelector(".infoCadCad").innerHTML = ("Select if you want to play a perfect, imperfect, plagal, half, or deceptive cadence.");
+    document.querySelector(".infoCadCad").innerHTML = ("Select if you the cadence to be perfect, imperfect, plagal, half, or deceptive.");
   }
   else {
     document.querySelector(".infoCadCad").innerHTML = ("");
@@ -1971,8 +1963,12 @@ function nextChord() {
 }
 
 function playChord(keyNoteC, typeNoteC, inversionC) {
+  resetLedges();
   if (typeNoteC == 1) {
     typeHeight = 1;
+  }
+  if (typeNoteC == 2 || typeNoteC == 3) {
+    typeHeight = 10;
   }
   Bsh = false;
   Esh = false;
@@ -2067,7 +2063,7 @@ function playChord(keyNoteC, typeNoteC, inversionC) {
   else if (keyNoteC == '/D' && typeNoteC == 3 && inversionC == 0) {
     plays('#D3', 1000, 0.1); plays('#F3', 1000, 0.11); plays('#Ab4', 1000, 0.111); plays('#D3', 1000, 3.2); plays('#F3', 1000, 4.4); plays('#Ab4', 1000, 5.6); keySig(1, true)}
   else if (keyNoteC == '/Eb' && typeNoteC == 3 && inversionC == 0) {
-    plays('#Eb3', 1000, 0.1); plays('#Gb3', 1000, 0.11); plays('#A5', 1000, 0.11); plays('#Eb3', 1000, 3.2); plays('#Gb3', 1000, 4.4); plays('#A5', 1000, 5.6); keySig(6, true)}
+    plays('#Eb3', 1000, 0.1); plays('#Gb3', 1000, 0.11); plays('#A4', 1000, 0.11); plays('#Eb3', 1000, 3.2); plays('#Gb3', 1000, 4.4); plays('#A4', 1000, 5.6); keySig(6, true)}
   else if (keyNoteC == '/E' && typeNoteC == 3 && inversionC == 0) {
     plays('#E3', 1000, 0.1); plays('#G3', 1000, 0.11); plays('#Bb4', 1000, 0.111); plays('#E3', 1000, 3.2); plays('#G3', 1000, 4.4); plays('#Bb4', 1000, 5.6); keySig(1, false)}
   else if (keyNoteC == '/F' && typeNoteC == 3 && inversionC == 0) {
@@ -2272,6 +2268,8 @@ function playChord(keyNoteC, typeNoteC, inversionC) {
     plays('#Db4', 1000, 0.1); plays('#G4', 1000, 0.11); plays('#Bb5', 1000, 0.111); plays('#Db4', 1000, 2.2); plays('#G4', 1000, 3.4); plays('#Bb5', 1000, 4.6); keySig(2, true)} 
   else {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields")
   }
@@ -2615,6 +2613,8 @@ function nextArpeggio() {
     plays('#Bb5', length, 11);plays('#G4', length, 12);plays('#D4', length, 13); keySig(2, true)}
   else {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields")
   }
@@ -2649,14 +2649,18 @@ function theory2() {
 
 // Prints the grand staff
 function notation() {
-  document.getElementById("grand").style.visibility = "visible";
+  if (typeHeight != 10) {
+    document.getElementById("grand").style.visibility = "visible";
+    document.getElementById("box").style.visibility = "visible";
+    document.getElementById("box2").style.visibility = "visible";
+  }
 }
 
 // Creates the key signature by showing or hiding images of flats and sharps
 var sharps = false;
 var numAccident = 0;
 function keySig(number, flat) {
-  if (flat) {
+  if (flat && typeHeight != 10) {
     sharps = false;
     if (number > 0) {
       document.getElementById('b1').style.visibility="visible";
@@ -2694,7 +2698,7 @@ function keySig(number, flat) {
       numAccident = 7;
     }
   }
-  else if (!flat) {
+  else if (!flat && typeHeight != 10) {
     sharps = true;
     if (number > 0) {
       document.getElementById('s1').style.visibility="visible";
@@ -2743,6 +2747,9 @@ function surprise() {
 
 // Shows all of the notes played on the sheet music
 function note(height, number) {
+  if (typeHeight == 10) {
+    return;
+  }
   if (number == 1) {
     document.getElementById('n1').style.visibility="visible";
     n1.style.top = height+"%";
@@ -2968,6 +2975,8 @@ function nextCadence() {
 
   if (!selected || keyNoteCad == null) {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     window.alert("Please enter all fields");
   }
 
@@ -3025,6 +3034,8 @@ function nextCadence() {
         plays('#G3', 2000, 1.54); plays('#B4', 2000, 1.55); plays('#D4', 2000, 1.555); plays('#G4', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
 
@@ -3069,10 +3080,14 @@ function nextCadence() {
         plays('#G3', 2000, 1.54); plays('#Bb4', 2000, 1.55); plays('#D4', 2000, 1.555); plays('#G4', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else {
       document.getElementById("grand").style.visibility = "hidden";
+      document.getElementById("box").style.visibility = "hidden";
+      document.getElementById("box2").style.visibility = "hidden";
       window.alert("Please enter all fields");
     }
   }
@@ -3122,6 +3137,8 @@ function nextCadence() {
         plays('#G3', 2000, 1.54); plays('#B4', 2000, 1.55); plays('#D4', 2000, 1.555); plays('#G4', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else if (!maj) {
@@ -3165,10 +3182,14 @@ function nextCadence() {
         plays('#G3', 2000, 1.54); plays('#Bb4', 2000, 1.55); plays('#D4', 2000, 1.555); plays('#G4', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else {
       document.getElementById("grand").style.visibility = "hidden";
+      document.getElementById("box").style.visibility = "hidden";
+      document.getElementById("box2").style.visibility = "hidden";
       window.alert("Please enter all fields");
     }
   }
@@ -3218,6 +3239,8 @@ function nextCadence() {
         plays('#D4', 2000, 1.54); plays('#A5', 2000, 1.55); plays('#D5', 2000, 1.555); plays('#Gb5', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else if (!maj) {
@@ -3261,10 +3284,14 @@ function nextCadence() {
         plays('#D4', 2000, 1.54); plays('#A5', 2000, 1.55); plays('#D5', 2000, 1.555); plays('#F5', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else {
       document.getElementById("grand").style.visibility = "hidden";
+      document.getElementById("box").style.visibility = "hidden";
+      document.getElementById("box2").style.visibility = "hidden";
       window.alert("Please enter all fields");
     }
   }
@@ -3313,6 +3340,8 @@ function nextCadence() {
         plays('#E4', 2000, 1.54); plays('#B5', 2000, 1.55); plays('#E5', 2000, 1.555); plays('#G5', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else if (!maj) {
@@ -3356,10 +3385,14 @@ function nextCadence() {
         plays('#E4', 2000, 1.54); plays('#B5', 2000, 1.55); plays('#E5', 2000, 1.555); plays('#Ab5', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else {
       document.getElementById("grand").style.visibility = "hidden";
+      document.getElementById("box").style.visibility = "hidden";
+      document.getElementById("box2").style.visibility = "hidden";
       window.alert("Please enter all fields");
     }
   }
@@ -3409,6 +3442,8 @@ function nextCadence() {
         plays('#G3', 2000, 1.54); plays('#B4', 2000, 1.55); plays('#D4', 2000, 1.555); plays('#B5', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
 
@@ -3453,10 +3488,14 @@ function nextCadence() {
         plays('#G3', 2000, 1.54); plays('#Bb4', 2000, 1.55); plays('#D4', 2000, 1.555); plays('#Bb5', 2000, 1.5555);}
       else {
         document.getElementById("grand").style.visibility = "hidden";
+        document.getElementById("box").style.visibility = "hidden";
+        document.getElementById("box2").style.visibility = "hidden";
         window.alert("Please enter all fields");}
     }
     else {
       document.getElementById("grand").style.visibility = "hidden";
+      document.getElementById("box").style.visibility = "hidden";
+      document.getElementById("box2").style.visibility = "hidden";
       window.alert("Please enter all fields");
     }
   }
@@ -3572,6 +3611,9 @@ function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
   resetLedges();
   if (typeNoteC == 1) {
     typeHeight = 1;
+  }
+  if (typeNoteC7 == 3 || typeNoteC7 == 4 || typeNoteC7 == 5) {
+    typeHeight = 10;
   }
   Bsh = false;
   Esh = false;
@@ -4160,6 +4202,8 @@ function playChord7(keyNoteC7, typeNoteC7, inversionC7) {
     plays('#G4', 1000, 0.1); plays('#Bb5', 1000, 0.11); plays('#Db5', 1000, 0.111); plays('#E4', 1000, 0.1111);plays('#G4', 1000, 4.4); plays('#Bb5', 1000, 5.6); plays('#Db5', 1000, 6.8); plays('#E4', 1000, 3.2);keySig(2, true);} 
   else {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields");
   }
@@ -4533,6 +4577,8 @@ function nextArpeggio7() {
     plays('#F4', length, 1);plays('#G4', length, 2);plays('#B5', length, 3);plays('#D5', length, 4);plays('#F5', length, 5);plays('#G5', length, 6);plays('#B6', length, 7);plays('#D6', length, 8);plays('#F6', length, 9);plays('#D6', length, 10);plays('#B6', length, 11);plays('#G5', length, 12);plays('#F5', length, 13);plays('#D5', length, 14);plays('#B5', length, 15);plays('#G4', length, 16);plays('#F4', length, 17);}  
   else {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields")
   }
@@ -4762,6 +4808,8 @@ function scales36() {
   }
   else {
     document.getElementById("grand").style.visibility = "hidden";
+    document.getElementById("box").style.visibility = "hidden";
+    document.getElementById("box2").style.visibility = "hidden";
     document.getElementById('Speed').textContent = '';
     window.alert("Please enter all fields")
   }
@@ -4799,3 +4847,25 @@ function arpeggiated() {
   plays2('#E3', length, 1.1);plays2('#C4', length, 1.11);plays2('#G4', length, 1.111);
   plays2('#G3', length, 2.1);plays2('#G4', length, 2.11);plays2('#C5', length, 2.111);plays2('#E5', length, 2.111);
 }
+
+const hoverElement = document.querySelector('.menu');
+hoverElement.addEventListener('mouseover', () => {
+  document.querySelector('#scales i.fa-music').style.visibility = 'visible';
+  document.querySelector('#arpeggios i.fa-spinner').style.visibility = 'visible';
+  document.querySelector('#arpeggios7 i.fa-spinner').style.visibility = 'visible';
+  document.querySelector('#chords i.fa-bars').style.visibility = 'visible';
+  document.querySelector('#chords7 i.fa-bars').style.visibility = 'visible';
+  document.querySelector('#cadences i.fa-spotify').style.visibility = 'visible';
+  document.querySelector('#other i.fa-plus-circle').style.visibility = 'visible';
+  document.querySelector('#keyFind i.fa-search').style.visibility = 'visible';
+});
+hoverElement.addEventListener('mouseleave', () => {
+  document.querySelector('#scales i.fa-music').style.visibility = 'hidden';
+  document.querySelector('#arpeggios i.fa-spinner').style.visibility = 'hidden';
+  document.querySelector('#arpeggios7 i.fa-spinner').style.visibility = 'hidden';
+  document.querySelector('#chords i.fa-bars').style.visibility = 'hidden';
+  document.querySelector('#chords7 i.fa-bars').style.visibility = 'hidden';
+  document.querySelector('#cadences i.fa-spotify').style.visibility = 'hidden';
+  document.querySelector('#other i.fa-plus-circle').style.visibility = 'hidden';
+  document.querySelector('#keyFind i.fa-search').style.visibility = 'hidden';
+});
