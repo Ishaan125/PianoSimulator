@@ -12,6 +12,8 @@
   <title>Piano Simulator</title>
   <link href="Hi.css" rel="stylesheet"/>
   <link rel="icon" type="image/x-icon" href="img/flavicon.png">
+  <script src="https://unpkg.com/tone/build/Tone.js"></script>
+  <script src="metronome.js" defer></script>
   <script src="Main.js" defer></script>
 
   <!--Used this for the icons in the side panel-->
@@ -248,6 +250,39 @@
 <!--Dark mode button at the top right-->
 <button id = dark onclick = "btn(), dark()" style="visibility: hidden;">Dark Mode</button>
 
+<!-- Metronome controls -->
+<div id="metronome">
+  <!-- Circular BPM knob -->
+  <div id="bpmKnob" role="slider" valuemin="30" valuemax="240" valuenow="100" data-min="30" data-max="240" data-value="100">
+    <div id="knobWrap">
+      <svg viewBox="0 0 100 100" id="knobSvg">
+        <circle id="knobTrack"></circle>
+        <circle id="knobFill" stroke-dasharray="0 251.2"></circle>
+    <!-- inner disk to hold the BPM number -->
+    <circle id="knobInner"></circle>
+    <!-- beat markers (top, right, bottom, left) -->
+    <circle class="knobBeat" data-index="1" cx="84" cy="50"></circle>
+    <circle class="knobBeat" data-index="2" cx="50" cy="84"></circle>
+    <circle class="knobBeat" data-index="3" cx="16" cy="50"></circle>
+    <circle class="knobBeat" data-index="4" cx="50" cy="16"></circle>
+      </svg>
+      <div id="bpmDisplay">100</div>
+    </div>
+  </div>
+  <label for="subdivision">Sub</label>
+  <select id="subdivision">
+    <option value="1">Duple</option>
+    <option value="2">Triplet</option>
+    <option value="3">Quarter</option>
+    <option value="4">Eighth</option>
+    <option value="5">Eighth Triplet</option>
+    <option value="6">Sixteenth</option>
+  </select>
+  <button id="metroStart">Start</button>
+  <button id="metroStop" disabled>Stop</button>
+  <div id="metroBeat"></div>
+</div>
+
 <!--  
 <div>
   <span id="rangaeValue">100</span>
@@ -302,7 +337,7 @@ alt l, alt o
       <li><button class = question onclick = "btn(), infoSpeed()" id = speedInfo><strong>?</strong></button></li>
       <br class = line> <br class = line>
       <!--Slider to change speed-->
-      <input id = slide type="range" min="30" max="500" value="100" oninput="rangeValue.innerText = this.value">
+      <input id = slide class = slider type = "range" min="30" max="500" value="100" oninput="rangeValue.innerText = this.value">
       <p id="rangeValue">150</p>
     </li>
     <br class = line>
@@ -405,11 +440,11 @@ alt l, alt o
   </ul>
 </div>
 
-<div class = "infoKeyC">    
+<div class = "info infoKeyC">    
 </div>
-<div class = "infoTypeC">    
+<div class = "info infoTypeC">    
 </div>
-<div class = "infoInversionC">    
+<div class = "info infoInversionC">    
 </div>
 
 <!--Arpeggios-->
@@ -450,7 +485,7 @@ alt l, alt o
     <li>Speed:
       <li><button class = question onclick = "btn(), infoSpeedA()" id = speedInfoA><strong>?</strong></button></li>
       <br class = line> <br class = line>
-      <input id = slidea type="range" min="30" max="500" value="100" oninput="rangeValuea.innerText = this.value">
+      <input id = slidea class = slider type="range" min="30" max="500" value="100" oninput="rangeValuea.innerText = this.value">
       <p id="rangeValuea">150</p>
     </li>
     <li><button onclick = "btn(), notation(), nextArpeggio()" class = Done><i class="fa fa-check"></i></button></li>
@@ -458,13 +493,13 @@ alt l, alt o
   </ul>
 </div>
 
-<div class = "infoKeyA">    
+<div class = "info infoKeyA">    
 </div>
-<div class = "infoTypeA">    
+<div class = "info infoTypeA">    
 </div>
-<div class = "infoInversionA">    
+<div class = "info infoInversionA">    
 </div>
-<div class = "infoSpeedA">    
+<div class = "info infoSpeedA">    
 </div>
 
 <!--Cadences-->
@@ -514,11 +549,11 @@ alt l, alt o
   </ul>
 </div>
 
-<div class = "infoKeyCad">    
+<div class = "info infoKeyCad">    
 </div>
-<div class = "infoTypeCad">    
+<div class = "info infoTypeCad">    
 </div>
-<div class = "infoCadCad">    
+<div class = "info infoCadCad">    
 </div>
 
 <!--The numerals that show at the bottom of the sheet music when a cadence is played-->
@@ -668,11 +703,11 @@ Also stores the grand staff that the music is printed on-->
     <li><button onclick = "btn(), reload()" class = close><i class = "fa fa-times"></i></button></li>
   </ul>
 </div>
-<div class = "infoKeyC7">    
+<div class = "info infoKeyC7">    
 </div>
-<div class = "infoTypeC7">    
+<div class = "info infoTypeC7">    
 </div>
-<div class = "infoInversionC7">    
+<div class = "info infoInversionC7">    
 </div>
 
 <!--7th Arpeggios-->
@@ -715,7 +750,7 @@ Also stores the grand staff that the music is printed on-->
     <li>Speed:
       <li><button class = question onclick = "btn(), infoSpeedA7()" id = speedInfoA7><strong>?</strong></button></li>
       <br  class = line> <br  class = line>
-      <input id = slidea7 type="range" min="30" max="500" value="100" oninput="rangeValuea7.innerText = this.value">
+      <input id = slidea7 class = slider type="range" min="30" max="500" value="100" oninput="rangeValuea7.innerText = this.value">
       <p id="rangeValuea7">150</p>
     </li>
     <li><button onclick = "btn(), notation(), nextArpeggio7()" class = Done><i class="fa fa-check"></i></button></li>
@@ -723,13 +758,13 @@ Also stores the grand staff that the music is printed on-->
   </ul>
 </div>
 
-<div class = "infoKeyA7">    
+<div class = "info infoKeyA7">    
 </div>
-<div class = "infoTypeA7">    
+<div class = "info infoTypeA7">    
 </div>
-<div class = "infoInversionA7">    
+<div class = "info infoInversionA7">    
 </div>
-<div class = "infoSpeedA7">    
+<div class = "info infoSpeedA7">    
 </div>
 
 <!--The extra stuff that includes scales in 6ths and 3rds, chromatic scale, and 64 chords-->
@@ -761,7 +796,7 @@ Also stores the grand staff that the music is printed on-->
     <br class = line><br class = line>
     <li>Speed:
       <br class = line><br class = line>
-      <input id = slide36 type="range" min="30" max="500" value="100" oninput="rangeValue36.innerText = this.value">
+      <input id = slide36 class = slider type="range" min="30" max="500" value="100" oninput="rangeValue36.innerText = this.value">
       <p id="rangeValue36">150</p>
     </li>
     <br class = line>

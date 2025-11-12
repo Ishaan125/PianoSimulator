@@ -771,7 +771,7 @@ function playOrder(key, length, times) {
     findHeight = 30;
   }
   // Prints the note on the sheet music with the dimensions
-  note(findHeight, number);
+  note(findHeight+.4, number);  // Modify for screen size
 
   // Positions of all of the ledger lines
   if (findHeight <= 31.02 && !oneA && typeHeight != 10) {
@@ -1736,7 +1736,7 @@ function infoInversionC() {
 
 var xC7 = 0;
 function infoKeyC7() {
-  document.querySelector(".infoKeyC7").classList.toggle("infoKeyCactive7");
+  document.querySelector(".infoKeyC7").classList.toggle("infoKeyC7active");
   if (xC7 % 2 == 0) {
     document.querySelector(".infoKeyC7").innerHTML = ("Select the key for your chord.");
   }
@@ -1747,7 +1747,7 @@ function infoKeyC7() {
 }
 var yC7 = 0;
 function infoTypeC7() {
-  document.querySelector(".infoTypeC7").classList.toggle("infoTypeCactive7");
+  document.querySelector(".infoTypeC7").classList.toggle("infoTypeC7active");
   if (yC7 % 2 == 0) {
     document.querySelector(".infoTypeC7").innerHTML = ("Select if you want the chord to be in major, minor, augmented, or diminished.");
   }
@@ -1758,7 +1758,7 @@ function infoTypeC7() {
 }
 var zC7 = 0;
 function infoInversionC7() {
-  document.querySelector(".infoInversionC7").classList.toggle("infoInversionCactive7");
+  document.querySelector(".infoInversionC7").classList.toggle("infoInversionC7active");
   if (zC7 % 2 == 0) {
     document.querySelector(".infoInversionC7").innerHTML = ("Select if you want the chord to be in root position, 1st inversion, 2nd inversion, or 3rd inversion");
   }
