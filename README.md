@@ -1,6 +1,8 @@
 # Piano Simulator
 
-An interactive, browser-based piano practice tool with guides, technique panels, a metronome with a BPM knob, and quality-of-life UI features.
+Link to Website: https://yellow-wave-075ea1110.3.azurestaticapps.net/
+
+An interactive, browser-based piano practice tool which lets users play a virtual piano and offers numerous piano techniques, such as scales and chords with customizable keys, modes, etc. Exercises are displayed on both the piano and sheet music, and there are also additional tools like a metronome, pedal controls, and guides.
 
 ## Overview
 - Frontend: HTML + CSS + JavaScript (vanilla)
@@ -29,7 +31,7 @@ An interactive, browser-based piano practice tool with guides, technique panels,
 - img/ — images and icons
 
 ## Getting Started
-1. Open Index.html in a modern browser (Chrome/Edge/Firefox).
+1. Open the link in a modern browser: https://yellow-wave-075ea1110.3.azurestaticapps.net/
 2. Interact with the piano keys or top-panel features.
 3. Use the metronome control in the top-right:
    - Drag the circular knob to adjust BPM
